@@ -1,0 +1,222 @@
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {'transition_tokens': (384,)}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {'transition_tokens': (384,)}
+JAX devices (1): [cuda(id=0)]
+Policy devices: cuda:0
+Train devices:  cuda:0
+Tracing train function.
+no rnd data in data
+Optimizer model_opt has 197,057,283 variables.
+Optimizer actor_opt has 9,464,849 variables.
+Optimizer critic_opt has 9,708,799 variables.
+Logdir /home/ziyu/logdir/ziyu_crafter_cuda_3_seed_3
+Observation space:
+  image            Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255)
+  transition_tokens Space(dtype=uint32, shape=(384,), low=0, high=4294967295)
+  goal_tokens      Space(dtype=uint32, shape=(5, 384), low=0, high=4294967295)
+  goal_id          Space(dtype=uint32, shape=(5,), low=0, high=4294967295)
+  reward           Space(dtype=float32, shape=(), low=-inf, high=inf)
+  is_first         Space(dtype=bool, shape=(), low=False, high=True)
+  is_last          Space(dtype=bool, shape=(), low=False, high=True)
+  is_terminal      Space(dtype=bool, shape=(), low=False, high=True)
+  log_reward       Space(dtype=float32, shape=(1,), low=-inf, high=inf)
+  log_achievement_collect_coal Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_diamond Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_drink Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_iron Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_sapling Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_wood Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_skeleton Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_zombie Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_cow Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_furnace Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_table Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_wake_up Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+Action space:
+  action           Space(dtype=float32, shape=(17,), low=0, high=1)
+  reset            Space(dtype=bool, shape=(), low=False, high=True)
+Prefill train dataset.
+Traceback (most recent call last):
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 229, in <module>
+    main()
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 69, in main
+    embodied.run.train_eval(
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/train_eval.py", line 90, in train_eval
+    driver_train(random_agent.policy, steps=100)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/driver.py", line 42, in __call__
+    step, episode = self._step(policy, step, episode)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/driver.py", line 47, in _step
+    obs = self._env.step(acts)
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/batch.py", line 34, in step
+    obs = [ob() for ob in obs]
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/batch.py", line 34, in <listcomp>
+    obs = [ob() for ob in obs]
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 230, in __call__
+    self._result = self._receive(self._callid)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 178, in _receive
+    raise Exception(payload)
+Exception: Traceback (most recent call last):
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 202, in _loop
+    state, result = function(state, *args, **kwargs)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/parallel.py", line 40, in _respond
+    result = getattr(state, name)(*args, **kwargs)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/wrappers.py", line 156, in step
+    obs = self.env.step(action)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/wrappers.py", line 115, in step
+    return self.env.step({**action, self._key: index})
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/envs/crafter.py", line 115, in step
+    goals = self.get_goals(info)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/envs/crafter.py", line 87, in get_goals
+    response_dict = gpt_35_api_stream(messages)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/gpt_api.py", line 270, in gpt_35_api_stream
+    response = future.result(timeout=10)
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/gpt_api.py", line 222, in azure_api_call
+    sleep_time = int(re.findall(r'Please retry after (\w+) second', message)[0])
+NameError: name 're' is not defined
+[31m╭─────────────────────────────── [39m[1mTraceback (most recent call last)[31m[22m ────────────────────────────────╮
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/[1mtrain.py[22m:[94m229[39m in [92m<module>[39m              [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   226                                                                                            [31m│
+[31m│[39m   227                                                                                            [31m│
+[31m│[39m   228 [94mif[39m [91m__name__[39m == [33m'__main__'[39m:                                                                 [31m│
+[31m│[39m [31m❱ [39m229   main()                                                                                   [31m│
+[31m│[39m   230                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/[1mtrain.py[22m:[94m69[39m in [92mmain[39m                   [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    66 │     eval_env = make_envs(config)  # mode='eval'                                          [31m│
+[31m│[39m    67 │     cleanup += [env, eval_env]                                                           [31m│
+[31m│[39m    68 │     agent = agt.Agent(env.obs_space, env.act_space, step, config)                        [31m│
+[31m│[39m [31m❱ [39m 69 │     embodied.run.train_eval(                                                             [31m│
+[31m│[39m    70 │   │     agent, env, eval_env, replay, eval_replay, logger, args)                         [31m│
+[31m│[39m    71 │                                                                                          [31m│
+[31m│[39m    72 │   [94melif[39m args.script == [33m'train_holdout'[39m:                                                   [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/[1mtrain_eval.py[22m:[94m90[39m in      [31m│
+[31m│[39m [92mtrain_eval[39m                                                                                       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    87   random_agent = embodied.RandomAgent(train_env.act_space)                                 [31m│
+[31m│[39m    88   [96mprint[39m([33m'Prefill train dataset.'[39m)                                                          [31m│
+[31m│[39m    89   [94mwhile[39m [96mlen[39m(train_replay) < [96mmax[39m(args.batch_steps, args.train_fill):                        [31m│
+[31m│[39m [31m❱ [39m 90 │   driver_train(random_agent.policy, steps=[94m100[39m)                                           [31m│
+[31m│[39m    91   [96mprint[39m([33m'Prefill eval dataset.'[39m)                                                           [31m│
+[31m│[39m    92   [94mwhile[39m [96mlen[39m(eval_replay) < [96mmax[39m(args.batch_steps, args.eval_fill):                          [31m│
+[31m│[39m    93 │   driver_eval(random_agent.policy, steps=[94m100[39m)                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mdriver.py[22m:[94m42[39m in         [31m│
+[31m│[39m [92m__call__[39m                                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   39   [94mdef[39m [92m__call__[39m([96mself[39m, policy, steps=[94m0[39m, episodes=[94m0[39m):                                          [31m│
+[31m│[39m   40 │   step, episode = [94m0[39m, [94m0[39m                                                                    [31m│
+[31m│[39m   41 │   [94mwhile[39m step < steps [95mor[39m episode < episodes:                                               [31m│
+[31m│[39m [31m❱ [39m42 │     step, episode = [96mself[39m._step(policy, step, episode)                                     [31m│
+[31m│[39m   43                                                                                             [31m│
+[31m│[39m   44   [94mdef[39m [92m_step[39m([96mself[39m, policy, step, episode):                                                   [31m│
+[31m│[39m   45 │   [94massert[39m [96mall[39m([96mlen[39m(x) == [96mlen[39m([96mself[39m._env) [94mfor[39m x [95min[39m [96mself[39m._acts.values())                       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mdriver.py[22m:[94m47[39m in [92m_step[39m   [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   44   [94mdef[39m [92m_step[39m([96mself[39m, policy, step, episode):                                                   [31m│
+[31m│[39m   45 │   [94massert[39m [96mall[39m([96mlen[39m(x) == [96mlen[39m([96mself[39m._env) [94mfor[39m x [95min[39m [96mself[39m._acts.values())                       [31m│
+[31m│[39m   46 │   acts = {k: v [94mfor[39m k, v [95min[39m [96mself[39m._acts.items() [94mif[39m [95mnot[39m k.startswith([33m'log_'[39m)}                [31m│
+[31m│[39m [31m❱ [39m47 │   obs = [96mself[39m._env.step(acts)                                                              [31m│
+[31m│[39m   48 │   obs = {k: convert(v) [94mfor[39m k, v [95min[39m obs.items()}                                           [31m│
+[31m│[39m   49 │   [94massert[39m [96mall[39m([96mlen[39m(x) == [96mlen[39m([96mself[39m._env) [94mfor[39m x [95min[39m obs.values()), obs                         [31m│
+[31m│[39m   50 │   acts, [96mself[39m._state = policy(obs, [96mself[39m._state, **[96mself[39m._kwargs)                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/[1mcontextlib.py[22m:[94m79[39m in [92minner[39m                       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    76 │   │   [1m@wraps[22m(func)                                                                       [31m│
+[31m│[39m    77 │   │   [94mdef[39m [92minner[39m(*args, **kwds):                                                          [31m│
+[31m│[39m    78 │   │   │   [94mwith[39m [96mself[39m._recreate_cm():                                                      [31m│
+[31m│[39m [31m❱ [39m 79 │   │   │   │   [94mreturn[39m func(*args, **kwds)                                                 [31m│
+[31m│[39m    80 │   │   [94mreturn[39m inner                                                                       [31m│
+[31m│[39m    81                                                                                            [31m│
+[31m│[39m    82                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mbatch.py[22m:[94m34[39m in [92mstep[39m     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   31 │     act = {k: v[i] [94mfor[39m k, v [95min[39m action.items()}                                            [31m│
+[31m│[39m   32 │     obs.append(env.step(act))                                                             [31m│
+[31m│[39m   33 │   [94mif[39m [96mself[39m._parallel:                                                                      [31m│
+[31m│[39m [31m❱ [39m34 │     obs = [ob() [94mfor[39m ob [95min[39m obs]                                                            [31m│
+[31m│[39m   35 │   [94mreturn[39m {k: np.array([ob[k] [94mfor[39m ob [95min[39m obs]) [94mfor[39m k [95min[39m obs[[94m0[39m]}                             [31m│
+[31m│[39m   36                                                                                             [31m│
+[31m│[39m   37   [94mdef[39m [92mrender[39m([96mself[39m):                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mbatch.py[22m:[94m34[39m in          [31m│
+[31m│[39m [92m<listcomp>[39m                                                                                       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   31 │     act = {k: v[i] [94mfor[39m k, v [95min[39m action.items()}                                            [31m│
+[31m│[39m   32 │     obs.append(env.step(act))                                                             [31m│
+[31m│[39m   33 │   [94mif[39m [96mself[39m._parallel:                                                                      [31m│
+[31m│[39m [31m❱ [39m34 │     obs = [ob() [94mfor[39m ob [95min[39m obs]                                                            [31m│
+[31m│[39m   35 │   [94mreturn[39m {k: np.array([ob[k] [94mfor[39m ob [95min[39m obs]) [94mfor[39m k [95min[39m obs[[94m0[39m]}                             [31m│
+[31m│[39m   36                                                                                             [31m│
+[31m│[39m   37   [94mdef[39m [92mrender[39m([96mself[39m):                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mworker.py[22m:[94m230[39m in        [31m│
+[31m│[39m [92m__call__[39m                                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   227                                                                                            [31m│
+[31m│[39m   228   [94mdef[39m [92m__call__[39m([96mself[39m):                                                                      [31m│
+[31m│[39m   229 │   [94mif[39m [95mnot[39m [96mself[39m._complete:                                                                 [31m│
+[31m│[39m [31m❱ [39m230 │     [96mself[39m._result = [96mself[39m._receive([96mself[39m._callid)                                           [31m│
+[31m│[39m   231 │     [96mself[39m._complete = [94mTrue[39m                                                                [31m│
+[31m│[39m   232 │   [94mreturn[39m [96mself[39m._result                                                                    [31m│
+[31m│[39m   233                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mworker.py[22m:[94m178[39m in        [31m│
+[31m│[39m [92m_receive[39m                                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   175 │     [94mexcept[39m ([96mOSError[39m, [96mEOFError[39m):                                                          [31m│
+[31m│[39m   176 │   │   [94mraise[39m [96mRuntimeError[39m([33m'Lost connection to worker.'[39m)                                   [31m│
+[31m│[39m   177 │     [94mif[39m message == Message.ERROR:                                                         [31m│
+[31m│[39m [31m❱ [39m178 │   │   [94mraise[39m [96mException[39m(payload)                                                           [31m│
+[31m│[39m   179 │     [94massert[39m message == Message.RESULT, message                                            [31m│
+[31m│[39m   180 │     [96mself[39m._results[callid] = payload                                                      [31m│
+[31m│[39m   181 │   [94mreturn[39m [96mself[39m._results.pop(callid)                                                       [31m│
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+[1mException: [22mTraceback [1m([22mmost recent call last[1m)[22m:
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py"[39m, line [1m202[22m, in _loop
+    state, result = [1mfunction([22mstate, *args, **kwargs[1m)
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/parallel.py"[39m, line [1m40[22m, in _respond
+    result = [1mgetattr([22mstate, name[1m)([22m*args, **kwargs[1m)
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/wrappers.py"[39m, line [1m156[22m, in step
+    obs = [1mself.env.step([22maction[1m)
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/wrappers.py"[39m, line [1m115[22m, in step
+    return [1mself.env.step({[22m**action, self._key: index[1m})
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/envs/crafter.py"[39m, line [1m115[22m, in step
+    goals = [1mself.get_goals([22minfo[1m)
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/envs/crafter.py"[39m, line [1m87[22m, in get_goals
+    response_dict = [1mgpt_35_api_stream([22mmessages[1m)
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/gpt_api.py"[39m, line [1m270[22m, in gpt_35_api_stream
+    response = [1mfuture.result([33m[22mtimeout[39m=[1m10)
+  File [32m"/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/concurrent/futures/_base.py"[39m, line [1m458[22m, in result
+    return [1mself.__get_result()
+  File [32m"/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/concurrent/futures/_base.py"[39m, line [1m403[22m, in __get_result
+    raise self._exception
+  File [32m"/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/concurrent/futures/thread.py"[39m, line [1m58[22m, in run
+    result = [1mself.fn([22m*self.args, **self.kwargs[1m)
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/gpt_api.py"[39m, line [1m222[22m, in azure_api_call
+    sleep_time = [1mint(re.findall([22mr'Please retry after [1m([22m\w+[1m)[22m second', message[1m)[0])
+NameError: name [32m're'[39m is not defined

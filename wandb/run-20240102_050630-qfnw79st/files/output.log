@@ -1,0 +1,237 @@
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {'transition_tokens': (384,)}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {'transition_tokens': (384,)}
+JAX devices (1): [cuda(id=0)]
+Policy devices: cuda:0
+Train devices:  cuda:0
+Tracing train function.
+no rnd data in data
+Optimizer model_opt has 197,057,283 variables.
+Optimizer actor_opt has 9,464,849 variables.
+Optimizer critic_opt has 9,708,799 variables.
+Logdir /home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2
+Observation space:
+  image            Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255)
+  transition_tokens Space(dtype=uint32, shape=(384,), low=0, high=4294967295)
+  goal_tokens      Space(dtype=uint32, shape=(5, 384), low=0, high=4294967295)
+  goal_id          Space(dtype=uint32, shape=(5,), low=0, high=4294967295)
+  reward           Space(dtype=float32, shape=(), low=-inf, high=inf)
+  is_first         Space(dtype=bool, shape=(), low=False, high=True)
+  is_last          Space(dtype=bool, shape=(), low=False, high=True)
+  is_terminal      Space(dtype=bool, shape=(), low=False, high=True)
+  log_reward       Space(dtype=float32, shape=(1,), low=-inf, high=inf)
+  log_achievement_collect_coal Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_diamond Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_drink Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_iron Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_sapling Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_wood Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_skeleton Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_zombie Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_cow Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_furnace Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_table Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_wake_up Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+Action space:
+  action           Space(dtype=float32, shape=(17,), low=0, high=1)
+  reset            Space(dtype=bool, shape=(), low=False, high=True)
+Prefill train dataset.
+Episode has 149 steps and return 2.1.
+Episode has 153 steps and return 0.1.
+Episode has 199 steps and return 1.1.
+Episode has 85 steps and return 0.1.
+Episode has 281 steps and return 1.1.
+Saved chunk: 20240102T050700F173420-0oBCc4aQXdboUwRHGex90e-5eRyqxdWYME9A4T55dFpbd-1024.npz
+Episode has 157 steps and return 0.1.
+Prefill eval dataset.
+Episode has 159 steps and return 0.1.
+Episode has 157 steps and return 1.1.
+Episode has 150 steps and return 0.1.
+Episode has 164 steps and return 1.1.
+Episode has 138 steps and return 0.1.
+Episode has 175 steps and return 2.1.
+Saved chunk: 20240102T051803F466531-2iFOwUCPBUNKFzehUZd1nJ-3R2Sb6GcSwbh7HJBQ4gf6N-1024.npz
+[92m─────────────────────────────────────────────────────────────────────────────────── [39m[1mStep 1100[92m[22m ────────────────────────────────────────────────────────────────────────────────────
+episode/length [1m157[22m [34m/[39m episode/score [1m0.1[22m [34m/[39m episode/reward_rate [1m0.99[22m [34m/[39m eval_episode/length [1m175[22m [34m/[39m eval_episode/score [1m2.1[22m [34m/[39m eval_episode/reward_rate [1m0.99[22m [34m/[39m train_stats/sum_log_reward
+[1m0.77[22m [34m/[39m train_stats/max_log_achievement_collect_sapling [1m0.33[22m [34m/[39m train_stats/max_log_achievement_place_plant [1m0.17[22m [34m/[39m train_stats/max_log_achievement_wake_up [1m2.5[22m [34m/
+train_stats/max_log_achievement_collect_drink [1m1[22m [34m/[39m eval_stats/sum_log_reward [1m0.77[22m [34m/[39m eval_stats/max_log_achievement_collect_drink [1m0.33[22m [34m/
+eval_stats/max_log_achievement_collect_sapling [1m0.17[22m [34m/[39m eval_stats/max_log_achievement_place_plant [1m0.17[22m [34m/[39m eval_stats/max_log_achievement_wake_up [1m2.17[22m [34m/
+eval_stats/max_log_achievement_collect_wood [1m0.2
+Creating new TensorBoard event file writer.
+Did not find any checkpoint.
+Writing checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2/checkpoint.ckpt
+Start training loop.
+Starting evaluation at step 1100
+[34m[1mwandb[39m[22m: [33mWARNING[39m Found log directory outside of given root_logdir, dropping given root_logdir for event file in /home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2
+Saved chunk: 20240102T051654F196820-5eRyqxdWYME9A4T55dFpbd-0000000000000000000000-76.npz
+Saved chunk: 20240102T052631F968575-3R2Sb6GcSwbh7HJBQ4gf6N-0000000000000000000000-76.npz
+Tracing policy function.
+Wrote checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2/checkpoint.ckpt
+Tracing policy function.
+Episode has 184 steps and return 2.1.
+Tracing policy function.
+Tracing train function.
+Tracing report function.
+Tracing report function.
+Tracing report function.
+[92m─────────────────────────────────────────────────────────────────────────────────── [39m[1mStep 1101[92m[22m ────────────────────────────────────────────────────────────────────────────────────
+eval_episode/length [1m184[22m [34m/[39m eval_episode/score [1m2.1[22m [34m/[39m eval_episode/reward_rate [1m0.97[22m [34m/[39m eval_stats/sum_log_reward [1m2.1[22m [34m/[39m eval_stats/max_log_achievement_collect_drink [1m0[22m [34m/
+eval_stats/max_log_achievement_collect_sapling [1m1[22m [34m/[39m eval_stats/max_log_achievement_collect_wood [1m0[22m [34m/[39m eval_stats/max_log_achievement_place_plant [1m1[22m [34m/
+eval_stats/max_log_achievement_wake_up [1m3[22m [34m/[39m train/action_mag [1m16[22m [34m/[39m train/action_max [1m16[22m [34m/[39m train/action_mean [1m8.03[22m [34m/[39m train/action_min [1m0[22m [34m/[39m train/action_std [1m4.36[22m [34m/
+train/actor_opt_actor_opt_grad_overflow [1m0[22m [34m/[39m train/actor_opt_actor_opt_grad_scale [1m1e4[22m [34m/[39m train/actor_opt_grad_norm [1m2.9e-4[22m [34m/[39m train/actor_opt_grad_steps [1m1[22m [34m/[39m train/actor_opt_loss
+[1m-1.33[22m [34m/[39m train/adv_mag [1m0[22m [34m/[39m train/adv_max [1m0[22m [34m/[39m train/adv_mean [1m0[22m [34m/[39m train/adv_min [1m0[22m [34m/[39m train/adv_std [1m0[22m [34m/[39m train/cont_avg [1m1[22m [34m/[39m train/cont_loss_mean [1m0.82[22m [34m/[39m train/cont_loss_std [1m0.31[22m [34m/
+train/cont_neg_acc [1m1[22m [34m/[39m train/cont_neg_loss [1m0.55[22m [34m/[39m train/cont_pos_acc [1m0.38[22m [34m/[39m train/cont_pos_loss [1m0.82[22m [34m/[39m train/cont_pred [1m0.46[22m [34m/[39m train/cont_rate [1m1[22m [34m/[39m train/dyn_loss_mean [1m10.68[22m [34m/
+train/dyn_loss_std [1m0.53[22m [34m/[39m train/extr_critic_critic_opt_critic_opt_grad_overflow [1m0[22m [34m/[39m train/extr_critic_critic_opt_critic_opt_grad_scale [1m1e4[22m [34m/
+train/extr_critic_critic_opt_grad_norm [1m4.84[22m [34m/[39m train/extr_critic_critic_opt_grad_steps [1m1[22m [34m/[39m train/extr_critic_critic_opt_loss [1m1.9e4[22m [34m/[39m train/extr_critic_mag [1m0[22m [34m/
+train/extr_critic_max [1m0[22m [34m/[39m train/extr_critic_mean [1m0[22m [34m/[39m train/extr_critic_min [1m0[22m [34m/[39m train/extr_critic_std [1m0[22m [34m/[39m train/extr_return_normed_mag [1m0[22m [34m/[39m train/extr_return_normed_max [1m0[22m [34m/
+train/extr_return_normed_mean [1m0[22m [34m/[39m train/extr_return_normed_min [1m0[22m [34m/[39m train/extr_return_normed_std [1m0[22m [34m/[39m train/extr_return_rate [1m0[22m [34m/[39m train/extr_return_raw_mag [1m0[22m [34m/
+train/extr_return_raw_max [1m0[22m [34m/[39m train/extr_return_raw_mean [1m0[22m [34m/[39m train/extr_return_raw_min [1m0[22m [34m/[39m train/extr_return_raw_std [1m0[22m [34m/[39m train/extr_reward_mag [1m0[22m [34m/[39m train/extr_reward_max [1m0[22m [34m/
+train/extr_reward_mean [1m0[22m [34m/[39m train/extr_reward_min [1m0[22m [34m/[39m train/extr_reward_std [1m0[22m [34m/[39m train/image_loss_mean [1m3863.93[22m [34m/[39m train/image_loss_std [1m263.05[22m [34m/[39m train/model_loss_mean [1m4087[22m [34m/
+train/model_loss_std [1m263.19[22m [34m/[39m train/model_opt_grad_norm nan [34m/[39m train/model_opt_grad_steps [1m0[22m [34m/[39m train/model_opt_loss [1m4.1e7[22m [34m/[39m train/model_opt_model_opt_grad_overflow [1m1[22m [34m/
+train/model_opt_model_opt_grad_scale [1m5000[22m [34m/[39m train/policy_entropy_mag [1m2.79[22m [34m/[39m train/policy_entropy_max [1m2.79[22m [34m/[39m train/policy_entropy_mean [1m2.58[22m [34m/[39m train/policy_entropy_min [1m1.62[22m [34m/
+train/policy_entropy_std [1m0.1[22m [34m/[39m train/policy_logprob_mag [1m5.41[22m [34m/[39m train/policy_logprob_max [1m-0.46[22m [34m/[39m train/policy_logprob_mean [1m-2.58[22m [34m/[39m train/policy_logprob_min [1m-5.41[22m [34m/
+train/policy_logprob_std [1m0.69[22m [34m/[39m train/policy_randomness_mag [1m0.98[22m [34m/[39m train/policy_randomness_max [1m0.98[22m [34m/[39m train/policy_randomness_mean [1m0.91[22m [34m/[39m train/policy_randomness_min [1m0.57[22m [34m/
+train/policy_randomness_std [1m0.04[22m [34m/[39m train/post_ent_mag [1m106.13[22m [34m/[39m train/post_ent_max [1m106.13[22m [34m/[39m train/post_ent_mean [1m105.51[22m [34m/[39m train/post_ent_min [1m104.78[22m [34m/[39m train/post_ent_std [1m0.23[22m [34m/
+train/prior_ent_mag [1m106.74[22m [34m/[39m train/prior_ent_max [1m106.74[22m [34m/[39m train/prior_ent_mean [1m105.58[22m [34m/[39m train/prior_ent_min [1m104.51[22m [34m/[39m train/prior_ent_std [1m0.34[22m [34m/[39m train/rep_loss_mean [1m10.68[22m [34m/
+train/rep_loss_std [1m0.53[22m [34m/[39m train/reward_avg [1m6.3e-3[22m [34m/[39m train/reward_loss_mean [1m5.54[22m [34m/[39m train/reward_loss_std [1m9.5e-7[22m [34m/[39m train/reward_max_data [1m1[22m [34m/[39m train/reward_max_pred [1m0[22m [34m/
+train/reward_neg_acc [1m1[22m [34m/[39m train/reward_neg_loss [1m5.54[22m [34m/[39m train/reward_pos_acc [1m0[22m [34m/[39m train/reward_pos_loss [1m5.54[22m [34m/[39m train/reward_pred [1m0[22m [34m/[39m train/reward_rate [1m0.01[22m [34m/
+train/transition_tokens_loss_mean [1m210.3[22m [34m/[39m train/transition_tokens_loss_std [1m15.22[22m [34m/[39m train/params_agent/wm/model_opt [1m2e8[22m [34m/[39m train/params_agent/task_behavior/critic/critic_opt [1m9.7e6
+[34m/[39m train/params_agent/task_behavior/ac/actor_opt [1m9.5e6[22m [34m/[39m report/cont_avg [1m1[22m [34m/[39m report/cont_loss_mean [1m0.84[22m [34m/[39m report/cont_loss_std [1m0.3[22m [34m/[39m report/cont_neg_acc [1m0.75[22m [34m/
+report/cont_neg_loss [1m0.54[22m [34m/[39m report/cont_pos_acc [1m0.36[22m [34m/[39m report/cont_pos_loss [1m0.84[22m [34m/[39m report/cont_pred [1m0.45[22m [34m/[39m report/cont_rate [1m1[22m [34m/[39m report/dyn_loss_mean [1m10.61[22m [34m/[39m report/dyn_loss_std
+[1m0.59[22m [34m/[39m report/image_loss_mean [1m3863.37[22m [34m/[39m report/image_loss_std [1m264.93[22m [34m/[39m report/model_loss_mean [1m4086.73[22m [34m/[39m report/model_loss_std [1m265.07[22m [34m/[39m report/post_ent_mag [1m106.26[22m [34m/
+report/post_ent_max [1m106.26[22m [34m/[39m report/post_ent_mean [1m105.54[22m [34m/[39m report/post_ent_min [1m104.78[22m [34m/[39m report/post_ent_std [1m0.25[22m [34m/[39m report/prior_ent_mag [1m106.63[22m [34m/[39m report/prior_ent_max [1m106.63[22m [34m/
+report/prior_ent_mean [1m105.58[22m [34m/[39m report/prior_ent_min [1m104.28[22m [34m/[39m report/prior_ent_std [1m0.41[22m [34m/[39m report/rep_loss_mean [1m10.61[22m [34m/[39m report/rep_loss_std [1m0.59[22m [34m/[39m report/reward_avg [1m6.3e-3[22m [34m/
+report/reward_loss_mean [1m5.54[22m [34m/[39m report/reward_loss_std [1m9.5e-7[22m [34m/[39m report/reward_max_data [1m1[22m [34m/[39m report/reward_max_pred [1m0[22m [34m/[39m report/reward_neg_acc [1m1[22m [34m/[39m report/reward_neg_loss [1m5.54[22m [34m/
+report/reward_pos_acc [1m0[22m [34m/[39m report/reward_pos_loss [1m5.54[22m [34m/[39m report/reward_pred [1m0[22m [34m/[39m report/reward_rate [1m0.01[22m [34m/[39m report/transition_tokens_loss_mean [1m210.61[22m [34m/
+report/transition_tokens_loss_std [1m13.45[22m [34m/[39m eval/cont_avg [1m1[22m [34m/[39m eval/cont_loss_mean [1m0.78[22m [34m/[39m eval/cont_loss_std [1m0.28[22m [34m/[39m eval/cont_neg_acc [1m0.25[22m [34m/[39m eval/cont_neg_loss [1m0.73[22m [34m/
+eval/cont_pos_acc [1m0.42[22m [34m/[39m eval/cont_pos_loss [1m0.79[22m [34m/[39m eval/cont_pred [1m0.47[22m [34m/[39m eval/cont_rate [1m1[22m [34m/[39m eval/dyn_loss_mean [1m10.55[22m [34m/[39m eval/dyn_loss_std [1m0.51[22m [34m/[39m eval/image_loss_mean [1m3947.46[22m [34m/
+eval/image_loss_std [1m205.11[22m [34m/[39m eval/model_loss_mean [1m4171.08[22m [34m/[39m eval/model_loss_std [1m202.84[22m [34m/[39m eval/post_ent_mag [1m106.09[22m [34m/[39m eval/post_ent_max [1m106.09[22m [34m/[39m eval/post_ent_mean [1m105.62[22m [34m/
+eval/post_ent_min [1m104.97[22m [34m/[39m eval/post_ent_std [1m0.21[22m [34m/[39m eval/prior_ent_mag [1m106.65[22m [34m/[39m eval/prior_ent_max [1m106.65[22m [34m/[39m eval/prior_ent_mean [1m105.64[22m [34m/[39m eval/prior_ent_min [1m104.35[22m [34m/
+eval/prior_ent_std [1m0.34[22m [34m/[39m eval/rep_loss_mean [1m10.55[22m [34m/[39m eval/rep_loss_std [1m0.51[22m [34m/[39m eval/reward_avg [1m0.01[22m [34m/[39m eval/reward_loss_mean [1m5.54[22m [34m/[39m eval/reward_loss_std [1m9.5e-7[22m [34m/
+eval/reward_max_data [1m1[22m [34m/[39m eval/reward_max_pred [1m0[22m [34m/[39m eval/reward_neg_acc [1m1[22m [34m/[39m eval/reward_neg_loss [1m5.54[22m [34m/[39m eval/reward_pos_acc [1m0[22m [34m/[39m eval/reward_pos_loss [1m5.54[22m [34m/[39m eval/reward_pred [1m0[22m [34m/
+eval/reward_rate [1m0.01[22m [34m/[39m eval/transition_tokens_loss_mean [1m210.96[22m [34m/[39m eval/transition_tokens_loss_std [1m14.11[22m [34m/[39m replay/size [1m1038[22m [34m/[39m replay/inserts [1m1038[22m [34m/[39m replay/samples [1m112[22m [34m/
+replay/insert_wait_avg [1m2.6e-6[22m [34m/[39m replay/insert_wait_frac [1m1[22m [34m/[39m replay/sample_wait_avg [1m1.5e-6[22m [34m/[39m replay/sample_wait_frac [1m1[22m [34m/[39m eval_replay/size [1m1222[22m [34m/[39m eval_replay/inserts [1m1222[22m [34m/
+eval_replay/samples [1m112[22m [34m/[39m eval_replay/insert_wait_avg [1m2.9e-6[22m [34m/[39m eval_replay/insert_wait_frac [1m1[22m [34m/[39m eval_replay/sample_wait_avg [1m1.9e-6[22m [34m/[39m eval_replay/sample_wait_frac [1m1[22m [34m/
+timer/duration [1m1510.46[22m [34m/[39m timer/env.step_count [1m1101[22m [34m/[39m timer/env.step_total [1m663.06[22m [34m/[39m timer/env.step_frac [1m0.44[22m [34m/[39m timer/env.step_avg [1m0.6[22m [34m/[39m timer/env.step_min [1m2.5e-3[22m [34m/
+timer/env.step_max [1m29.46[22m [34m/[39m timer/replay._sample_count [1m112[22m [34m/[39m timer/replay._sample_total [1m34.83[22m [34m/[39m timer/replay._sample_frac [1m0.02[22m [34m/[39m timer/replay._sample_avg [1m0.31[22m [34m/
+timer/replay._sample_min [1m0.06[22m [34m/[39m timer/replay._sample_max [1m2.81[22m [34m/[39m timer/agent.save_count [1m1[22m [34m/[39m timer/agent.save_total [1m1.44[22m [34m/[39m timer/agent.save_frac [1m9.5e-4[22m [34m/[39m timer/agent.save_avg [1m1.44
+[34m/[39m timer/agent.save_min [1m1.44[22m [34m/[39m timer/agent.save_max [1m1.44[22m [34m/[39m timer/agent.policy_count [1m186[22m [34m/[39m timer/agent.policy_total [1m12.44[22m [34m/[39m timer/agent.policy_frac [1m8.2e-3[22m [34m/[39m timer/agent.policy_avg
+[1m0.07[22m [34m/[39m timer/agent.policy_min [1m8.6e-3[22m [34m/[39m timer/agent.policy_max [1m8.53[22m [34m/[39m timer/dataset_train_count [1m1[22m [34m/[39m timer/dataset_train_total [1m7.5e-5[22m [34m/[39m timer/dataset_train_frac [1m4.9e-8[22m [34m/
+timer/dataset_train_avg [1m7.5e-5[22m [34m/[39m timer/dataset_train_min [1m7.5e-5[22m [34m/[39m timer/dataset_train_max [1m7.5e-5[22m [34m/[39m timer/agent.train_count [1m1[22m [34m/[39m timer/agent.train_total [1m100.34[22m [34m/
+timer/agent.train_frac [1m0.07[22m [34m/[39m timer/agent.train_avg [1m100.34[22m [34m/[39m timer/agent.train_min [1m100.34[22m [34m/[39m timer/agent.train_max [1m100.34[22m [34m/[39m timer/agent.report_count [1m2[22m [34m/[39m timer/agent.report_total
+[1m22.81[22m [34m/[39m timer/agent.report_frac [1m0.02[22m [34m/[39m timer/agent.report_avg [1m11.41[22m [34m/[39m timer/agent.report_min [1m6.02[22m [34m/[39m timer/agent.report_max [1m16.79[22m [34m/[39m timer/dataset_eval_count [1m1[22m [34m/
+timer/dataset_eval_total [1m1.6e-4[22m [34m/[39m timer/dataset_eval_frac [1m1e-7[22m [34m/[39m timer/dataset_eval_avg [1m1.6e-4[22m [34m/[39m timer/dataset_eval_min [1m1.6e-4[22m [34m/[39m timer/dataset_eval_max [1m1.6e-4
+Episode has 155 steps and return 0.1.
+Episode has 143 steps and return 3.1.
+[92m─────────────────────────────────────────────────────────────────────────────────── [39m[1mStep 1450[92m[22m ────────────────────────────────────────────────────────────────────────────────────
+episode/length [1m143[22m [34m/[39m episode/score [1m3.1[22m [34m/[39m episode/reward_rate [1m0.97[22m [34m/[39m train/action_mag [1m16[22m [34m/[39m train/action_max [1m16[22m [34m/[39m train/action_mean [1m7.81[22m [34m/[39m train/action_min [1m0[22m [34m/[39m train/action_std
+[1m4.82[22m [34m/[39m train/actor_opt_actor_opt_grad_overflow [1m0[22m [34m/[39m train/actor_opt_actor_opt_grad_scale [1m1e4[22m [34m/[39m train/actor_opt_grad_norm [1m8.2e-3[22m [34m/[39m train/actor_opt_grad_steps [1m90[22m [34m/
+train/actor_opt_loss [1m303.51[22m [34m/[39m train/adv_mag [1m0.02[22m [34m/[39m train/adv_max [1m0.02[22m [34m/[39m train/adv_mean [1m0.01[22m [34m/[39m train/adv_min [1m8e-4[22m [34m/[39m train/adv_std [1m6.4e-3[22m [34m/[39m train/cont_avg [1m0.99[22m [34m/
+train/cont_loss_mean [1m0.08[22m [34m/[39m train/cont_loss_std [1m0.36[22m [34m/[39m train/cont_neg_acc [1m0.04[22m [34m/[39m train/cont_neg_loss [1m4.45[22m [34m/[39m train/cont_pos_acc [1m0.96[22m [34m/[39m train/cont_pos_loss [1m0.06[22m [34m/[39m train/cont_pred
+[1m0.96[22m [34m/[39m train/cont_rate [1m0.99[22m [34m/[39m train/dyn_loss_mean [1m7.7[22m [34m/[39m train/dyn_loss_std [1m9.9[22m [34m/[39m train/extr_critic_critic_opt_critic_opt_grad_overflow [1m0[22m [34m/
+train/extr_critic_critic_opt_critic_opt_grad_scale [1m1e4[22m [34m/[39m train/extr_critic_critic_opt_grad_norm [1m30.13[22m [34m/[39m train/extr_critic_critic_opt_grad_steps [1m90[22m [34m/
+train/extr_critic_critic_opt_loss [1m5e4[22m [34m/[39m train/extr_critic_mag [1m6.8e-3[22m [34m/[39m train/extr_critic_max [1m6.8e-3[22m [34m/[39m train/extr_critic_mean [1m6.8e-3[22m [34m/[39m train/extr_critic_min [1m6.8e-3[22m [34m/
+train/extr_critic_std [1m6.3e-6[22m [34m/[39m train/extr_return_normed_mag [1m0.03[22m [34m/[39m train/extr_return_normed_max [1m0.03[22m [34m/[39m train/extr_return_normed_mean [1m0.02[22m [34m/[39m train/extr_return_normed_min [1m6.2e-3[22m [34m/
+train/extr_return_normed_std [1m6.4e-3[22m [34m/[39m train/extr_return_rate [1m0[22m [34m/[39m train/extr_return_raw_mag [1m0.03[22m [34m/[39m train/extr_return_raw_max [1m0.03[22m [34m/[39m train/extr_return_raw_mean [1m0.02[22m [34m/
+train/extr_return_raw_min [1m7.6e-3[22m [34m/[39m train/extr_return_raw_std [1m6.4e-3[22m [34m/[39m train/extr_reward_mag [1m2.2e-3[22m [34m/[39m train/extr_reward_max [1m2e-3[22m [34m/[39m train/extr_reward_mean [1m2e-3[22m [34m/
+train/extr_reward_min [1m1.9e-3[22m [34m/[39m train/extr_reward_std [1m5.3e-6[22m [34m/[39m train/image_loss_mean [1m415.71[22m [34m/[39m train/image_loss_std [1m145.1[22m [34m/[39m train/model_loss_mean [1m434.44[22m [34m/[39m train/model_loss_std
+[1m145.97[22m [34m/[39m train/model_opt_grad_norm [1m579.31[22m [34m/[39m train/model_opt_grad_steps [1m80[22m [34m/[39m train/model_opt_loss [1m6572.17[22m [34m/[39m train/model_opt_model_opt_grad_overflow [1m0.06[22m [34m/
+train/model_opt_model_opt_grad_scale [1m9.77[22m [34m/[39m train/policy_entropy_mag [1m2.78[22m [34m/[39m train/policy_entropy_max [1m2.78[22m [34m/[39m train/policy_entropy_mean [1m2.68[22m [34m/[39m train/policy_entropy_min [1m2.4[22m [34m/
+train/policy_entropy_std [1m0.04[22m [34m/[39m train/policy_logprob_mag [1m4.47[22m [34m/[39m train/policy_logprob_max [1m-1.33[22m [34m/[39m train/policy_logprob_mean [1m-2.68[22m [34m/[39m train/policy_logprob_min [1m-4.47[22m [34m/
+train/policy_logprob_std [1m0.5[22m [34m/[39m train/policy_randomness_mag [1m0.98[22m [34m/[39m train/policy_randomness_max [1m0.98[22m [34m/[39m train/policy_randomness_mean [1m0.95[22m [34m/[39m train/policy_randomness_min [1m0.85[22m [34m/
+train/policy_randomness_std [1m0.01[22m [34m/[39m train/post_ent_mag [1m75.94[22m [34m/[39m train/post_ent_max [1m75.94[22m [34m/[39m train/post_ent_mean [1m54.85[22m [34m/[39m train/post_ent_min [1m40.35[22m [34m/[39m train/post_ent_std [1m9.54[22m [34m/
+train/prior_ent_mag [1m76.47[22m [34m/[39m train/prior_ent_max [1m76.47[22m [34m/[39m train/prior_ent_mean [1m64.45[22m [34m/[39m train/prior_ent_min [1m55.7[22m [34m/[39m train/prior_ent_std [1m6.12[22m [34m/[39m train/rep_loss_mean [1m7.7[22m [34m/
+train/rep_loss_std [1m9.9[22m [34m/[39m train/reward_avg [1m4.1e-3[22m [34m/[39m train/reward_loss_mean [1m1.37[22m [34m/[39m train/reward_loss_std [1m0.66[22m [34m/[39m train/reward_max_data [1m1[22m [34m/[39m train/reward_max_pred [1m2.2e-3[22m [34m/
+train/reward_neg_acc [1m1[22m [34m/[39m train/reward_neg_loss [1m1.33[22m [34m/[39m train/reward_pos_acc [1m0[22m [34m/[39m train/reward_pos_loss [1m5.19[22m [34m/[39m train/reward_pred [1m1.9e-3[22m [34m/[39m train/reward_rate [1m9.8e-3[22m [34m/
+train/transition_tokens_loss_mean [1m12.66[22m [34m/[39m train/transition_tokens_loss_std [1m0.99[22m [34m/[39m train_stats/sum_log_reward [1m1.6[22m [34m/[39m train_stats/max_log_achievement_collect_drink [1m0[22m [34m/
+train_stats/max_log_achievement_collect_sapling [1m0.5[22m [34m/[39m train_stats/max_log_achievement_collect_wood [1m0.5[22m [34m/[39m train_stats/max_log_achievement_place_plant [1m0.5[22m [34m/
+train_stats/max_log_achievement_wake_up [1m1.5[22m [34m/[39m train_stats/mean_log_entropy [1m2.71[22m [34m/[39m report/cont_avg [1m0.99[22m [34m/[39m report/cont_loss_mean [1m0.03[22m [34m/[39m report/cont_loss_std [1m0.39[22m [34m/
+report/cont_neg_acc [1m0[22m [34m/[39m report/cont_neg_loss [1m4.63[22m [34m/[39m report/cont_pos_acc [1m1[22m [34m/[39m report/cont_pos_loss [1m2e-3[22m [34m/[39m report/cont_pred [1m1[22m [34m/[39m report/cont_rate [1m0.99[22m [34m/[39m report/dyn_loss_mean [1m5.67[22m [34m/
+report/dyn_loss_std [1m12.84[22m [34m/[39m report/image_loss_mean [1m100.75[22m [34m/[39m report/image_loss_std [1m86.33[22m [34m/[39m report/model_loss_mean [1m104.53[22m [34m/[39m report/model_loss_std [1m88.62[22m [34m/[39m report/post_ent_mag [1m61.41
+[34m/[39m report/post_ent_max [1m61.41[22m [34m/[39m report/post_ent_mean [1m31.6[22m [34m/[39m report/post_ent_min [1m11.89[22m [34m/[39m report/post_ent_std [1m12.24[22m [34m/[39m report/prior_ent_mag [1m63.63[22m [34m/[39m report/prior_ent_max [1m63.63[22m [34m/
+report/prior_ent_mean [1m41.15[22m [34m/[39m report/prior_ent_min [1m22.86[22m [34m/[39m report/prior_ent_std [1m10.22[22m [34m/[39m report/rep_loss_mean [1m5.67[22m [34m/[39m report/rep_loss_std [1m12.84[22m [34m/[39m report/reward_avg [1m0.01[22m [34m/
+report/reward_loss_mean [1m0.3[22m [34m/[39m report/reward_loss_std [1m1[22m [34m/[39m report/reward_max_data [1m1[22m [34m/[39m report/reward_max_pred [1m5.7e-3[22m [34m/[39m report/reward_neg_acc [1m1[22m [34m/[39m report/reward_neg_loss [1m0.21[22m [34m/
+report/reward_pos_acc [1m0[22m [34m/[39m report/reward_pos_loss [1m5.01[22m [34m/[39m report/reward_pred [1m4.4e-3[22m [34m/[39m report/reward_rate [1m0.02[22m [34m/[39m report/transition_tokens_loss_mean [1m0.04[22m [34m/
+report/transition_tokens_loss_std [1m0.03[22m [34m/[39m eval/cont_avg [1m0.99[22m [34m/[39m eval/cont_loss_mean [1m0.03[22m [34m/[39m eval/cont_loss_std [1m0.33[22m [34m/[39m eval/cont_neg_acc [1m0[22m [34m/[39m eval/cont_neg_loss [1m4.29[22m [34m/
+eval/cont_pos_acc [1m1[22m [34m/[39m eval/cont_pos_loss [1m4.4e-3[22m [34m/[39m eval/cont_pred [1m1[22m [34m/[39m eval/cont_rate [1m0.99[22m [34m/[39m eval/dyn_loss_mean [1m6.62[22m [34m/[39m eval/dyn_loss_std [1m16.25[22m [34m/[39m eval/image_loss_mean [1m93.97[22m [34m/
+eval/image_loss_std [1m82.04[22m [34m/[39m eval/model_loss_mean [1m98.24[22m [34m/[39m eval/model_loss_std [1m83.78[22m [34m/[39m eval/post_ent_mag [1m61.02[22m [34m/[39m eval/post_ent_max [1m61.02[22m [34m/[39m eval/post_ent_mean [1m33.11[22m [34m/
+eval/post_ent_min [1m11.79[22m [34m/[39m eval/post_ent_std [1m14.27[22m [34m/[39m eval/prior_ent_mag [1m61.3[22m [34m/[39m eval/prior_ent_max [1m61.3[22m [34m/[39m eval/prior_ent_mean [1m40.25[22m [34m/[39m eval/prior_ent_min [1m22.79[22m [34m/[39m eval/prior_ent_std
+[1m9.78[22m [34m/[39m eval/rep_loss_mean [1m6.62[22m [34m/[39m eval/rep_loss_std [1m16.25[22m [34m/[39m eval/reward_avg [1m5.1e-3[22m [34m/[39m eval/reward_loss_mean [1m0.22[22m [34m/[39m eval/reward_loss_std [1m0.87[22m [34m/[39m eval/reward_max_data [1m1[22m [34m/
+eval/reward_max_pred [1m5.6e-3[22m [34m/[39m eval/reward_neg_acc [1m1[22m [34m/[39m eval/reward_neg_loss [1m0.17[22m [34m/[39m eval/reward_pos_acc [1m0[22m [34m/[39m eval/reward_pos_loss [1m4.95[22m [34m/[39m eval/reward_pred [1m4.4e-3[22m [34m/[39m eval/reward_rate
+[1m0.01[22m [34m/[39m eval/transition_tokens_loss_mean [1m0.04[22m [34m/[39m eval/transition_tokens_loss_std [1m0.02[22m [34m/[39m replay/size [1m1387[22m [34m/[39m replay/inserts [1m349[22m [34m/[39m replay/samples [1m2784[22m [34m/[39m replay/insert_wait_avg [1m4e-6[22m [34m/
+replay/insert_wait_frac [1m1[22m [34m/[39m replay/sample_wait_avg [1m1.3e-6[22m [34m/[39m replay/sample_wait_frac [1m1[22m [34m/[39m eval_replay/size [1m1222[22m [34m/[39m eval_replay/inserts [1m0[22m [34m/[39m eval_replay/samples [1m16[22m [34m/
+eval_replay/insert_wait_avg nan [34m/[39m eval_replay/insert_wait_frac nan [34m/[39m eval_replay/sample_wait_avg [1m1.6e-6[22m [34m/[39m eval_replay/sample_wait_frac [1m1[22m [34m/[39m timer/duration [1m280.45[22m [34m/
+timer/env.step_count [1m349[22m [34m/[39m timer/env.step_total [1m201.57[22m [34m/[39m timer/env.step_frac [1m0.72[22m [34m/[39m timer/env.step_avg [1m0.58[22m [34m/[39m timer/env.step_min [1m2.9e-3[22m [34m/[39m timer/env.step_max [1m38.22[22m [34m/
+timer/replay._sample_count [1m2784[22m [34m/[39m timer/replay._sample_total [1m165.98[22m [34m/[39m timer/replay._sample_frac [1m0.59[22m [34m/[39m timer/replay._sample_avg [1m0.06[22m [34m/[39m timer/replay._sample_min [1m0.03[22m [34m/
+timer/replay._sample_max [1m0.11[22m [34m/[39m timer/agent.save_count [1m0[22m [34m/[39m timer/agent.save_total [1m0[22m [34m/[39m timer/agent.save_frac [1m0[22m [34m/[39m timer/agent.policy_count [1m349[22m [34m/[39m timer/agent.policy_total [1m3.89[22m [34m/
+timer/agent.policy_frac [1m0.01[22m [34m/[39m timer/agent.policy_avg [1m0.01[22m [34m/[39m timer/agent.policy_min [1m8.6e-3[22m [34m/[39m timer/agent.policy_max [1m0.02[22m [34m/[39m timer/dataset_train_count [1m174[22m [34m/
+timer/dataset_train_total [1m0.03[22m [34m/[39m timer/dataset_train_frac [1m1e-4[22m [34m/[39m timer/dataset_train_avg [1m1.6e-4[22m [34m/[39m timer/dataset_train_min [1m1.2e-4[22m [34m/[39m timer/dataset_train_max [1m5.6e-4[22m [34m/
+timer/agent.train_count [1m174[22m [34m/[39m timer/agent.train_total [1m68.78[22m [34m/[39m timer/agent.train_frac [1m0.25[22m [34m/[39m timer/agent.train_avg [1m0.4[22m [34m/[39m timer/agent.train_min [1m0.38[22m [34m/[39m timer/agent.train_max [1m0.42[22m [34m/
+timer/agent.report_count [1m2[22m [34m/[39m timer/agent.report_total [1m0.46[22m [34m/[39m timer/agent.report_frac [1m1.6e-3[22m [34m/[39m timer/agent.report_avg [1m0.23[22m [34m/[39m timer/agent.report_min [1m0.23[22m [34m/[39m timer/agent.report_max
+[1m0.23[22m [34m/[39m timer/dataset_eval_count [1m1[22m [34m/[39m timer/dataset_eval_total [1m8.1e-5[22m [34m/[39m timer/dataset_eval_frac [1m2.9e-7[22m [34m/[39m timer/dataset_eval_avg [1m8.1e-5[22m [34m/[39m timer/dataset_eval_min [1m8.1e-5[22m [34m/
+timer/dataset_eval_max [1m8.1e-5[22m [34m/[39m fps [1m1.24
+Episode has 167 steps and return 2.1.
+Episode has 173 steps and return 4.1.
+Episode has 200 steps and return 1.1.
+[92m─────────────────────────────────────────────────────────────────────────────────── [39m[1mStep 1903[92m[22m ────────────────────────────────────────────────────────────────────────────────────
+episode/length [1m200[22m [34m/[39m episode/score [1m1.1[22m [34m/[39m episode/reward_rate [1m0.98[22m [34m/[39m train/action_mag [1m16[22m [34m/[39m train/action_max [1m16[22m [34m/[39m train/action_mean [1m6.86[22m [34m/[39m train/action_min [1m0[22m [34m/[39m train/action_std
+[1m3.78[22m [34m/[39m train/actor_opt_actor_opt_grad_overflow [1m0[22m [34m/[39m train/actor_opt_actor_opt_grad_scale [1m1e4[22m [34m/[39m train/actor_opt_grad_norm [1m0.02[22m [34m/[39m train/actor_opt_grad_steps [1m290[22m [34m/
+train/actor_opt_loss [1m99.81[22m [34m/[39m train/adv_mag [1m0.56[22m [34m/[39m train/adv_max [1m0.55[22m [34m/[39m train/adv_mean [1m7.6e-3[22m [34m/[39m train/adv_min [1m-0.19[22m [34m/[39m train/adv_std [1m0.05[22m [34m/[39m train/cont_avg [1m0.99[22m [34m/
+train/cont_loss_mean [1m0.02[22m [34m/[39m train/cont_loss_std [1m0.23[22m [34m/[39m train/cont_neg_acc [1m0.16[22m [34m/[39m train/cont_neg_loss [1m2.69[22m [34m/[39m train/cont_pos_acc [1m1[22m [34m/[39m train/cont_pos_loss [1m4.4e-3[22m [34m/[39m train/cont_pred
+[1m0.99[22m [34m/[39m train/cont_rate [1m0.99[22m [34m/[39m train/dyn_loss_mean [1m5.24[22m [34m/[39m train/dyn_loss_std [1m11.19[22m [34m/[39m train/extr_critic_critic_opt_critic_opt_grad_overflow [1m0[22m [34m/
+train/extr_critic_critic_opt_critic_opt_grad_scale [1m1e4[22m [34m/[39m train/extr_critic_critic_opt_grad_norm [1m6.69[22m [34m/[39m train/extr_critic_critic_opt_grad_steps [1m290[22m [34m/
+train/extr_critic_critic_opt_loss [1m1.6e4[22m [34m/[39m train/extr_critic_mag [1m0.04[22m [34m/[39m train/extr_critic_max [1m0.04[22m [34m/[39m train/extr_critic_mean [1m0.04[22m [34m/[39m train/extr_critic_min [1m0.04[22m [34m/
+train/extr_critic_std [1m4.9e-5[22m [34m/[39m train/extr_return_normed_mag [1m0.59[22m [34m/[39m train/extr_return_normed_max [1m0.59[22m [34m/[39m train/extr_return_normed_mean [1m0.05[22m [34m/[39m train/extr_return_normed_min [1m-0.15[22m [34m/
+train/extr_return_normed_std [1m0.05[22m [34m/[39m train/extr_return_rate [1m2.3e-3[22m [34m/[39m train/extr_return_raw_mag [1m0.59[22m [34m/[39m train/extr_return_raw_max [1m0.59[22m [34m/[39m train/extr_return_raw_mean [1m0.05[22m [34m/
+train/extr_return_raw_min [1m-0.15[22m [34m/[39m train/extr_return_raw_std [1m0.05[22m [34m/[39m train/extr_reward_mag [1m0.15[22m [34m/[39m train/extr_reward_max [1m0.14[22m [34m/[39m train/extr_reward_mean [1m1.2e-3[22m [34m/[39m train/extr_reward_min
+[1m-0.04[22m [34m/[39m train/extr_reward_std [1m8.2e-3[22m [34m/[39m train/image_loss_mean [1m67.53[22m [34m/[39m train/image_loss_std [1m44.41[22m [34m/[39m train/model_loss_mean [1m70.95[22m [34m/[39m train/model_loss_std [1m46.53[22m [34m/
+train/model_opt_grad_norm [1m270.69[22m [34m/[39m train/model_opt_grad_steps [1m280[22m [34m/[39m train/model_opt_loss [1m692.85[22m [34m/[39m train/model_opt_model_opt_grad_overflow [1m0[22m [34m/[39m train/model_opt_model_opt_grad_scale
+[1m9.77[22m [34m/[39m train/policy_entropy_mag [1m2.61[22m [34m/[39m train/policy_entropy_max [1m2.61[22m [34m/[39m train/policy_entropy_mean [1m1.96[22m [34m/[39m train/policy_entropy_min [1m1.46[22m [34m/[39m train/policy_entropy_std [1m0.22[22m [34m/
+train/policy_logprob_mag [1m5.98[22m [34m/[39m train/policy_logprob_max [1m-0.72[22m [34m/[39m train/policy_logprob_mean [1m-1.96[22m [34m/[39m train/policy_logprob_min [1m-5.98[22m [34m/[39m train/policy_logprob_std [1m0.92[22m [34m/
+train/policy_randomness_mag [1m0.92[22m [34m/[39m train/policy_randomness_max [1m0.92[22m [34m/[39m train/policy_randomness_mean [1m0.69[22m [34m/[39m train/policy_randomness_min [1m0.52[22m [34m/[39m train/policy_randomness_std [1m0.08[22m [34m/
+train/post_ent_mag [1m49.42[22m [34m/[39m train/post_ent_max [1m49.42[22m [34m/[39m train/post_ent_mean [1m28.56[22m [34m/[39m train/post_ent_min [1m11.52[22m [34m/[39m train/post_ent_std [1m9.33[22m [34m/[39m train/prior_ent_mag [1m59.37[22m [34m/
+train/prior_ent_max [1m59.37[22m [34m/[39m train/prior_ent_mean [1m35.66[22m [34m/[39m train/prior_ent_min [1m15.16[22m [34m/[39m train/prior_ent_std [1m9.57[22m [34m/[39m train/rep_loss_mean [1m5.24[22m [34m/[39m train/rep_loss_std [1m11.19[22m [34m/
+train/reward_avg [1m8.1e-3[22m [34m/[39m train/reward_loss_mean [1m0.21[22m [34m/[39m train/reward_loss_std [1m0.77[22m [34m/[39m train/reward_max_data [1m1[22m [34m/[39m train/reward_max_pred [1m0.55[22m [34m/[39m train/reward_neg_acc [1m1[22m [34m/
+train/reward_neg_loss [1m0.17[22m [34m/[39m train/reward_pos_acc [1m0.39[22m [34m/[39m train/reward_pos_loss [1m3.37[22m [34m/[39m train/reward_pred [1m4.6e-3[22m [34m/[39m train/reward_rate [1m0.01[22m [34m/[39m train/transition_tokens_loss_mean [1m0.04[22m [34m/
+train/transition_tokens_loss_std [1m0.03[22m [34m/[39m train_stats/sum_log_reward [1m2.43[22m [34m/[39m train_stats/max_log_achievement_collect_drink [1m1[22m [34m/[39m train_stats/max_log_achievement_collect_sapling [1m4[22m [34m/
+train_stats/max_log_achievement_collect_wood [1m0.33[22m [34m/[39m train_stats/max_log_achievement_place_plant [1m2[22m [34m/[39m train_stats/max_log_achievement_wake_up [1m1[22m [34m/[39m train_stats/mean_log_entropy [1m2.23
+[34m/[39m report/cont_avg [1m1[22m [34m/[39m report/cont_loss_mean [1m8.7e-3[22m [34m/[39m report/cont_loss_std [1m0.18[22m [34m/[39m report/cont_neg_acc [1m0.6[22m [34m/[39m report/cont_neg_loss [1m1.39[22m [34m/[39m report/cont_pos_acc [1m1[22m [34m/
+report/cont_pos_loss [1m1.9e-3[22m [34m/[39m report/cont_pred [1m1[22m [34m/[39m report/cont_rate [1m1[22m [34m/[39m report/dyn_loss_mean [1m4.75[22m [34m/[39m report/dyn_loss_std [1m7.66[22m [34m/[39m report/image_loss_mean [1m43.83[22m [34m/
+report/image_loss_std [1m24.5[22m [34m/[39m report/model_loss_mean [1m46.87[22m [34m/[39m report/model_loss_std [1m26.55[22m [34m/[39m report/post_ent_mag [1m41.93[22m [34m/[39m report/post_ent_max [1m41.93[22m [34m/[39m report/post_ent_mean [1m25.76[22m [34m/
+report/post_ent_min [1m11.49[22m [34m/[39m report/post_ent_std [1m7.6[22m [34m/[39m report/prior_ent_mag [1m56.93[22m [34m/[39m report/prior_ent_max [1m56.93[22m [34m/[39m report/prior_ent_mean [1m32.29[22m [34m/[39m report/prior_ent_min [1m10.48[22m [34m/
+report/prior_ent_std [1m8.65[22m [34m/[39m report/rep_loss_mean [1m4.75[22m [34m/[39m report/rep_loss_std [1m7.66[22m [34m/[39m report/reward_avg [1m7.5e-3[22m [34m/[39m report/reward_loss_mean [1m0.14[22m [34m/[39m report/reward_loss_std [1m0.6[22m [34m/
+report/reward_max_data [1m1[22m [34m/[39m report/reward_max_pred [1m0.91[22m [34m/[39m report/reward_neg_acc [1m1[22m [34m/[39m report/reward_neg_loss [1m0.11[22m [34m/[39m report/reward_pos_acc [1m0.54[22m [34m/[39m report/reward_pos_loss [1m2.58[22m [34m/
+report/reward_pred [1m5.8e-3[22m [34m/[39m report/reward_rate [1m0.01[22m [34m/[39m report/transition_tokens_loss_mean [1m0.03[22m [34m/[39m report/transition_tokens_loss_std [1m0.01[22m [34m/[39m eval/cont_avg [1m1[22m [34m/[39m eval/cont_loss_mean
+[1m0.02[22m [34m/[39m eval/cont_loss_std [1m0.19[22m [34m/[39m eval/cont_neg_acc [1m0.4[22m [34m/[39m eval/cont_neg_loss [1m1.86[22m [34m/[39m eval/cont_pos_acc [1m1[22m [34m/[39m eval/cont_pos_loss [1m8.2e-3[22m [34m/[39m eval/cont_pred [1m0.99[22m [34m/[39m eval/cont_rate [1m1[22m [34m/
+eval/dyn_loss_mean [1m7.21[22m [34m/[39m eval/dyn_loss_std [1m11.28[22m [34m/[39m eval/image_loss_mean [1m78.31[22m [34m/[39m eval/image_loss_std [1m76[22m [34m/[39m eval/model_loss_mean [1m82.82[22m [34m/[39m eval/model_loss_std [1m78.31[22m [34m/
+eval/post_ent_mag [1m63.33[22m [34m/[39m eval/post_ent_max [1m63.33[22m [34m/[39m eval/post_ent_mean [1m31.11[22m [34m/[39m eval/post_ent_min [1m11.38[22m [34m/[39m eval/post_ent_std [1m11.81[22m [34m/[39m eval/prior_ent_mag [1m56.93[22m [34m/[39m eval/prior_ent_max
+[1m56.93[22m [34m/[39m eval/prior_ent_mean [1m34.04[22m [34m/[39m eval/prior_ent_min [1m10.25[22m [34m/[39m eval/prior_ent_std [1m9.56[22m [34m/[39m eval/rep_loss_mean [1m7.21[22m [34m/[39m eval/rep_loss_std [1m11.28[22m [34m/[39m eval/reward_avg [1m3.3e-3[22m [34m/
+eval/reward_loss_mean [1m0.14[22m [34m/[39m eval/reward_loss_std [1m0.64[22m [34m/[39m eval/reward_max_data [1m1[22m [34m/[39m eval/reward_max_pred [1m0.91[22m [34m/[39m eval/reward_neg_acc [1m1[22m [34m/[39m eval/reward_neg_loss [1m0.12[22m [34m/
+eval/reward_pos_acc [1m0.78[22m [34m/[39m eval/reward_pos_loss [1m2.12[22m [34m/[39m eval/reward_pred [1m7.9e-3[22m [34m/[39m eval/reward_rate [1m8.8e-3[22m [34m/[39m eval/transition_tokens_loss_mean [1m0.03[22m [34m/[39m eval/transition_tokens_loss_std
+[1m0.02[22m [34m/[39m replay/size [1m1840[22m [34m/[39m replay/inserts [1m453[22m [34m/[39m replay/samples [1m3632[22m [34m/[39m replay/insert_wait_avg [1m3.9e-6[22m [34m/[39m replay/insert_wait_frac [1m1[22m [34m/[39m replay/sample_wait_avg [1m1.2e-6[22m [34m/
+replay/sample_wait_frac [1m1[22m [34m/[39m eval_replay/size [1m1222[22m [34m/[39m eval_replay/inserts [1m0[22m [34m/[39m eval_replay/samples [1m16[22m [34m/[39m eval_replay/insert_wait_avg nan [34m/[39m eval_replay/insert_wait_frac nan [34m/
+eval_replay/sample_wait_avg [1m1.2e-6[22m [34m/[39m eval_replay/sample_wait_frac [1m1[22m [34m/[39m timer/duration [1m303.34[22m [34m/[39m timer/env.step_count [1m453[22m [34m/[39m timer/env.step_total [1m200.47[22m [34m/[39m timer/env.step_frac [1m0.66[22m [34m/
+timer/env.step_avg [1m0.44[22m [34m/[39m timer/env.step_min [1m2.7e-3[22m [34m/[39m timer/env.step_max [1m24.62[22m [34m/[39m timer/replay._sample_count [1m3632[22m [34m/[39m timer/replay._sample_total [1m217.5[22m [34m/[39m timer/replay._sample_frac
+[1m0.72[22m [34m/[39m timer/replay._sample_avg [1m0.06[22m [34m/[39m timer/replay._sample_min [1m0.03[22m [34m/[39m timer/replay._sample_max [1m0.12[22m [34m/[39m timer/agent.save_count [1m0[22m [34m/[39m timer/agent.save_total [1m0[22m [34m/[39m timer/agent.save_frac
+[1m0[22m [34m/[39m timer/agent.policy_count [1m453[22m [34m/[39m timer/agent.policy_total [1m5.03[22m [34m/[39m timer/agent.policy_frac [1m0.02[22m [34m/[39m timer/agent.policy_avg [1m0.01[22m [34m/[39m timer/agent.policy_min [1m9e-3[22m [34m/
+timer/agent.policy_max [1m0.02[22m [34m/[39m timer/dataset_train_count [1m227[22m [34m/[39m timer/dataset_train_total [1m0.03[22m [34m/[39m timer/dataset_train_frac [1m1.1e-4[22m [34m/[39m timer/dataset_train_avg [1m1.5e-4[22m [34m/
+timer/dataset_train_min [1m1.2e-4[22m [34m/[39m timer/dataset_train_max [1m8.7e-4[22m [34m/[39m timer/agent.train_count [1m227[22m [34m/[39m timer/agent.train_total [1m89.89[22m [34m/[39m timer/agent.train_frac [1m0.3[22m [34m/[39m timer/agent.train_avg
+[1m0.4[22m [34m/[39m timer/agent.train_min [1m0.39[22m [34m/[39m timer/agent.train_max [1m0.41[22m [34m/[39m timer/agent.report_count [1m2[22m [34m/[39m timer/agent.report_total [1m0.46[22m [34m/[39m timer/agent.report_frac [1m1.5e-3[22m [34m/
+timer/agent.report_avg [1m0.23[22m [34m/[39m timer/agent.report_min [1m0.23[22m [34m/[39m timer/agent.report_max [1m0.23[22m [34m/[39m timer/dataset_eval_count [1m1[22m [34m/[39m timer/dataset_eval_total [1m6.6e-5[22m [34m/[39m timer/dataset_eval_frac
+[1m2.2e-7[22m [34m/[39m timer/dataset_eval_avg [1m6.6e-5[22m [34m/[39m timer/dataset_eval_min [1m6.6e-5[22m [34m/[39m timer/dataset_eval_max [1m6.6e-5[22m [34m/[39m fps [1m1.49
+Writing checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2/checkpoint.ckpt
+Saved chunk: 20240102T052631F968575-3R2Sb6GcSwbh7HJBQ4gf6N-0000000000000000000000-261.npz
+Saved chunk: 20240102T051654F196820-5eRyqxdWYME9A4T55dFpbd-0000000000000000000000-977.npz
+Wrote checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2/checkpoint.ckpt
+Saved chunk: 20240102T051654F196820-5eRyqxdWYME9A4T55dFpbd-3PWFciePAkKXF1BB2Nm6Gy-1024.npz

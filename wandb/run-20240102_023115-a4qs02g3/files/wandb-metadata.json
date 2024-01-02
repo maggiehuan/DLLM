@@ -1,0 +1,189 @@
+{
+    "os": "Linux-5.4.0-1109-azure-x86_64-with-glibc2.27",
+    "python": "3.10.13",
+    "heartbeatAt": "2024-01-02T02:31:16.168517",
+    "startedAt": "2024-01-02T02:31:15.728572",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--run.script",
+        "train_eval",
+        "--use_wandb",
+        "True",
+        "--logdir",
+        "/home/ziyu/logdir/ziyu_crafter_cuda_3_seed_3",
+        "--configs",
+        "crafter"
+    ],
+    "state": "running",
+    "program": "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py",
+    "codePathLocal": "LID-rnd/train.py",
+    "codePath": "Dynamic_model/DLLM-ziyu/LID-rnd/train.py",
+    "git": {
+        "remote": "https://github.com/ibisbill/prompt2meta.git",
+        "commit": null
+    },
+    "email": "ziyuhuan@outlook.com",
+    "root": "/home/ziyu/code/side_codes",
+    "host": "Atari-ML-001",
+    "username": "ziyu",
+    "executable": "/home/ziyu/anaconda3/envs/jaxpy39/bin/python",
+    "cpu_count": 24,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2593.991999999999,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2593.992,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 991.2787780761719,
+            "used": 758.625358581543
+        }
+    },
+    "gpu": "Tesla V100-PCIE-16GB",
+    "gpu_count": 4,
+    "gpu_devices": [
+        {
+            "name": "Tesla V100-PCIE-16GB",
+            "memory_total": 17179869184
+        },
+        {
+            "name": "Tesla V100-PCIE-16GB",
+            "memory_total": 17179869184
+        },
+        {
+            "name": "Tesla V100-PCIE-16GB",
+            "memory_total": 17179869184
+        },
+        {
+            "name": "Tesla V100-PCIE-16GB",
+            "memory_total": 17179869184
+        }
+    ],
+    "memory": {
+        "total": 440.9004783630371
+    }
+}

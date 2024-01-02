@@ -1,0 +1,155 @@
+Traceback (most recent call last):
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 229, in <module>
+    main()
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 65, in main
+    env = make_envs(config)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 176, in make_envs
+    return embodied.BatchEnv(envs, parallel=(config.envs.parallel != 'none'))
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/batch.py", line 9, in __init__
+    assert all(len(env) == 0 for env in envs)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/batch.py", line 9, in <genexpr>
+    assert all(len(env) == 0 for env in envs)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/base.py", line 80, in __len__
+    return len(self.env)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/parallel.py", line 28, in __len__
+    return self.worker(Message.CALL, '__len__')()
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 230, in __call__
+    self._result = self._receive(self._callid)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 178, in _receive
+    raise Exception(payload)
+Exception: Traceback (most recent call last):
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 202, in _loop
+    state, result = function(state, *args, **kwargs)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/parallel.py", line 35, in _respond
+    state = state or ctor()
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 169, in <lambda>
+    ctor = lambda: make_env(config, **overrides)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 198, in make_env
+    module = importlib.import_module(module)
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/envs/crafter.py", line 9, in <module>
+    from embodied.gpt_api import _generate_prompt, generate_prompt, traj2lang, traj2lang_small, parse_transition_string, gpt_35_api_stream, apply_intrinsic
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/gpt_api.py", line 280
+    if event['choices'][0]['finish_reason'] == 'stop':
+IndentationError: unexpected indent
+[31m╭─────────────────────────────── [39m[1mTraceback (most recent call last)[31m[22m ────────────────────────────────╮
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/[1mtrain.py[22m:[94m229[39m in [92m<module>[39m              [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   226                                                                                            [31m│
+[31m│[39m   227                                                                                            [31m│
+[31m│[39m   228 [94mif[39m [91m__name__[39m == [33m'__main__'[39m:                                                                 [31m│
+[31m│[39m [31m❱ [39m229   main()                                                                                   [31m│
+[31m│[39m   230                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/[1mtrain.py[22m:[94m65[39m in [92mmain[39m                   [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    62 │   [94melif[39m args.script == [33m'train_eval'[39m:                                                      [31m│
+[31m│[39m    63 │     replay = make_replay(config, logdir / [33m'replay'[39m)                                      [31m│
+[31m│[39m    64 │     eval_replay = make_replay(config, logdir / [33m'eval_replay'[39m, is_eval=[94mTrue[39m)              [31m│
+[31m│[39m [31m❱ [39m 65 │     env = make_envs(config)                                                              [31m│
+[31m│[39m    66 │     eval_env = make_envs(config)  # mode='eval'                                          [31m│
+[31m│[39m    67 │     cleanup += [env, eval_env]                                                           [31m│
+[31m│[39m    68 │     agent = agt.Agent(env.obs_space, env.act_space, step, config)                        [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/[1mtrain.py[22m:[94m176[39m in [92mmake_envs[39m             [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   173 │     ctor = bind(wrappers.RestartOnException, ctor)                                       [31m│
+[31m│[39m   174 │   ctors.append(ctor)                                                                     [31m│
+[31m│[39m   175   envs = [ctor() [94mfor[39m ctor [95min[39m ctors]                                                        [31m│
+[31m│[39m [31m❱ [39m176   [94mreturn[39m embodied.BatchEnv(envs, parallel=(config.envs.parallel != [33m'none'[39m))                [31m│
+[31m│[39m   177                                                                                            [31m│
+[31m│[39m   178                                                                                            [31m│
+[31m│[39m   179 [94mdef[39m [92mmake_env[39m(config, **overrides):                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mbatch.py[22m:[94m9[39m in [92m__init__[39m  [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    6 [94mclass[39m [4mBatchEnv[24m(base.Env):                                                                   [31m│
+[31m│[39m    7                                                                                             [31m│
+[31m│[39m    8   [94mdef[39m [92m__init__[39m([96mself[39m, envs, parallel):                                                       [31m│
+[31m│[39m [31m❱ [39m 9 │   [94massert[39m [96mall[39m([96mlen[39m(env) == [94m0[39m [94mfor[39m env [95min[39m envs)                                               [31m│
+[31m│[39m   10 │   [94massert[39m [96mlen[39m(envs) > [94m0[39m                                                                    [31m│
+[31m│[39m   11 │   [96mself[39m._envs = envs                                                                       [31m│
+[31m│[39m   12 │   [96mself[39m._parallel = parallel                                                               [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mbatch.py[22m:[94m9[39m in [92m<genexpr>[39m [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    6 [94mclass[39m [4mBatchEnv[24m(base.Env):                                                                   [31m│
+[31m│[39m    7                                                                                             [31m│
+[31m│[39m    8   [94mdef[39m [92m__init__[39m([96mself[39m, envs, parallel):                                                       [31m│
+[31m│[39m [31m❱ [39m 9 │   [94massert[39m [96mall[39m([96mlen[39m(env) == [94m0[39m [94mfor[39m env [95min[39m envs)                                               [31m│
+[31m│[39m   10 │   [94massert[39m [96mlen[39m(envs) > [94m0[39m                                                                    [31m│
+[31m│[39m   11 │   [96mself[39m._envs = envs                                                                       [31m│
+[31m│[39m   12 │   [96mself[39m._parallel = parallel                                                               [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mbase.py[22m:[94m80[39m in [92m__len__[39m   [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    77 │   [96mself[39m.env = env                                                                         [31m│
+[31m│[39m    78                                                                                            [31m│
+[31m│[39m    79   [94mdef[39m [92m__len__[39m([96mself[39m):                                                                       [31m│
+[31m│[39m [31m❱ [39m 80 │   [94mreturn[39m [96mlen[39m([96mself[39m.env)                                                                   [31m│
+[31m│[39m    81                                                                                            [31m│
+[31m│[39m    82   [94mdef[39m [92m__bool__[39m([96mself[39m):                                                                      [31m│
+[31m│[39m    83 │   [94mreturn[39m [96mbool[39m([96mself[39m.env)                                                                  [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mparallel.py[22m:[94m28[39m in       [31m│
+[31m│[39m [92m__len__[39m                                                                                          [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   25 │     [94mraise[39m [96mValueError[39m(name)                                                                [31m│
+[31m│[39m   26                                                                                             [31m│
+[31m│[39m   27   [94mdef[39m [92m__len__[39m([96mself[39m):                                                                        [31m│
+[31m│[39m [31m❱ [39m28 │   [94mreturn[39m [96mself[39m.worker(Message.CALL, [33m'__len__'[39m)()                                           [31m│
+[31m│[39m   29                                                                                             [31m│
+[31m│[39m   30   [94mdef[39m [92mclose[39m([96mself[39m):                                                                          [31m│
+[31m│[39m   31 │   [96mself[39m.worker.close()                                                                     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mworker.py[22m:[94m230[39m in        [31m│
+[31m│[39m [92m__call__[39m                                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   227                                                                                            [31m│
+[31m│[39m   228   [94mdef[39m [92m__call__[39m([96mself[39m):                                                                      [31m│
+[31m│[39m   229 │   [94mif[39m [95mnot[39m [96mself[39m._complete:                                                                 [31m│
+[31m│[39m [31m❱ [39m230 │     [96mself[39m._result = [96mself[39m._receive([96mself[39m._callid)                                           [31m│
+[31m│[39m   231 │     [96mself[39m._complete = [94mTrue[39m                                                                [31m│
+[31m│[39m   232 │   [94mreturn[39m [96mself[39m._result                                                                    [31m│
+[31m│[39m   233                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mworker.py[22m:[94m178[39m in        [31m│
+[31m│[39m [92m_receive[39m                                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   175 │     [94mexcept[39m ([96mOSError[39m, [96mEOFError[39m):                                                          [31m│
+[31m│[39m   176 │   │   [94mraise[39m [96mRuntimeError[39m([33m'Lost connection to worker.'[39m)                                   [31m│
+[31m│[39m   177 │     [94mif[39m message == Message.ERROR:                                                         [31m│
+[31m│[39m [31m❱ [39m178 │   │   [94mraise[39m [96mException[39m(payload)                                                           [31m│
+[31m│[39m   179 │     [94massert[39m message == Message.RESULT, message                                            [31m│
+[31m│[39m   180 │     [96mself[39m._results[callid] = payload                                                      [31m│
+[31m│[39m   181 │   [94mreturn[39m [96mself[39m._results.pop(callid)                                                       [31m│
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+[1mException: [22mTraceback [1m([22mmost recent call last[1m)[22m:
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py"[39m, line [1m202[22m, in _loop
+    state, result = [1mfunction([22mstate, *args, **kwargs[1m)
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/parallel.py"[39m, line [1m35[22m, in _respond
+    state = state or [1mctor()
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py"[39m, line [1m169[22m, in [1m<lambda[22m>
+    ctor = lambda: [1mmake_env([22mconfig, **overrides[1m)
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py"[39m, line [1m198[22m, in make_env
+    module = [1mimportlib.import_module([22mmodule[1m)
+  File [32m"/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/importlib/__init__.py"[39m, line [1m126[22m, in import_module
+    return [1m_bootstrap._gcd_import([22mname[1m[[22mlevel:[1m][22m, package, level[1m)
+  File [32m"<frozen importlib._bootstrap>"[39m, line [1m1050[22m, in _gcd_import
+  File [32m"<frozen importlib._bootstrap>"[39m, line [1m1027[22m, in _find_and_load
+  File [32m"<frozen importlib._bootstrap>"[39m, line [1m1006[22m, in _find_and_load_unlocked
+  File [32m"<frozen importlib._bootstrap>"[39m, line [1m688[22m, in _load_unlocked
+  File [32m"<frozen importlib._bootstrap_external>"[39m, line [1m883[22m, in exec_module
+  File [32m"<frozen importlib._bootstrap>"[39m, line [1m241[22m, in _call_with_frames_removed
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/envs/crafter.py"[39m, line [1m9[22m, in <module[1m>
+    from embodied.gpt_api import _generate_prompt, generate_prompt, traj2lang, traj2lang_small, parse_transition_string, gpt_35_api_stream, apply_intrinsic
+  File [32m"/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/gpt_api.py"[39m, line [1m280
+    if event[1m[[32m[22m'choices'[39m[1m][0][[32m[22m'finish_reason'[39m[1m][22m == [32m'stop'[39m:
+IndentationError: unexpected indent
