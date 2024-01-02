@@ -1,0 +1,209 @@
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {'transition_tokens': (384,)}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {'transition_tokens': (384,)}
+JAX devices (1): [cuda(id=0)]
+Policy devices: cuda:0
+Train devices:  cuda:0
+Tracing train function.
+no rnd data in data
+Optimizer model_opt has 197,057,283 variables.
+Optimizer actor_opt has 9,464,849 variables.
+Optimizer critic_opt has 9,708,799 variables.
+Logdir /home/ziyu/logdir/ziyu_crafter_cuda_3_seed_3
+Observation space:
+  image            Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255)
+  transition_tokens Space(dtype=uint32, shape=(384,), low=0, high=4294967295)
+  goal_tokens      Space(dtype=uint32, shape=(5, 384), low=0, high=4294967295)
+  goal_id          Space(dtype=uint32, shape=(5,), low=0, high=4294967295)
+  reward           Space(dtype=float32, shape=(), low=-inf, high=inf)
+  is_first         Space(dtype=bool, shape=(), low=False, high=True)
+  is_last          Space(dtype=bool, shape=(), low=False, high=True)
+  is_terminal      Space(dtype=bool, shape=(), low=False, high=True)
+  log_reward       Space(dtype=float32, shape=(1,), low=-inf, high=inf)
+  log_achievement_collect_coal Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_diamond Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_drink Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_iron Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_sapling Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_wood Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_skeleton Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_zombie Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_cow Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_furnace Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_table Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_wake_up Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+Action space:
+  action           Space(dtype=float32, shape=(17,), low=0, high=1)
+  reset            Space(dtype=bool, shape=(), low=False, high=True)
+Prefill train dataset.
+Prefill eval dataset.
+Found existing checkpoint.
+Loading checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_3_seed_3/checkpoint.ckpt
+Loaded checkpoint from 36528 seconds ago.
+Start training loop.
+Starting evaluation at step 19600
+Tracing policy function.
+Tracing policy function.
+Traceback (most recent call last):
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 229, in <module>
+    main()
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 69, in main
+    embodied.run.train_eval(
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/train_eval.py", line 145, in train_eval
+    driver_eval(policy_eval, episodes=max(len(eval_env), args.eval_eps))
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/driver.py", line 42, in __call__
+    step, episode = self._step(policy, step, episode)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/driver.py", line 47, in _step
+    obs = self._env.step(acts)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/batch.py", line 34, in step
+    obs = [ob() for ob in obs]
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/batch.py", line 34, in <listcomp>
+    obs = [ob() for ob in obs]
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 230, in __call__
+    self._result = self._receive(self._callid)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 174, in _receive
+    message, callid, payload = self._pipe.recv()
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+[31m╭─────────────────────────────── [39m[1mTraceback (most recent call last)[31m[22m ────────────────────────────────╮
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/[1mtrain.py[22m:[94m229[39m in [92m<module>[39m              [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   226                                                                                            [31m│
+[31m│[39m   227                                                                                            [31m│
+[31m│[39m   228 [94mif[39m [91m__name__[39m == [33m'__main__'[39m:                                                                 [31m│
+[31m│[39m [31m❱ [39m229   main()                                                                                   [31m│
+[31m│[39m   230                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/[1mtrain.py[22m:[94m69[39m in [92mmain[39m                   [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    66 │     eval_env = make_envs(config)  # mode='eval'                                          [31m│
+[31m│[39m    67 │     cleanup += [env, eval_env]                                                           [31m│
+[31m│[39m    68 │     agent = agt.Agent(env.obs_space, env.act_space, step, config)                        [31m│
+[31m│[39m [31m❱ [39m 69 │     embodied.run.train_eval(                                                             [31m│
+[31m│[39m    70 │   │     agent, env, eval_env, replay, eval_replay, logger, args)                         [31m│
+[31m│[39m    71 │                                                                                          [31m│
+[31m│[39m    72 │   [94melif[39m args.script == [33m'train_holdout'[39m:                                                   [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/[1mtrain_eval.py[22m:[94m145[39m in     [31m│
+[31m│[39m [92mtrain_eval[39m                                                                                       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   142 │   [94mif[39m should_eval(step):                                                                  [31m│
+[31m│[39m   143 │     [96mprint[39m([33m'Starting evaluation at step'[39m, [96mint[39m(step))                                      [31m│
+[31m│[39m   144 │     driver_eval.reset()                                                                  [31m│
+[31m│[39m [31m❱ [39m145 │     driver_eval(policy_eval, episodes=[96mmax[39m([96mlen[39m(eval_env), args.eval_eps))                 [31m│
+[31m│[39m   146 │   driver_train(policy_train, steps=[94m100[39m)                                                  [31m│
+[31m│[39m   147 │   [94mif[39m should_save(step):                                                                  [31m│
+[31m│[39m   148 │     checkpoint.save()                                                                    [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mdriver.py[22m:[94m42[39m in         [31m│
+[31m│[39m [92m__call__[39m                                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   39   [94mdef[39m [92m__call__[39m([96mself[39m, policy, steps=[94m0[39m, episodes=[94m0[39m):                                          [31m│
+[31m│[39m   40 │   step, episode = [94m0[39m, [94m0[39m                                                                    [31m│
+[31m│[39m   41 │   [94mwhile[39m step < steps [95mor[39m episode < episodes:                                               [31m│
+[31m│[39m [31m❱ [39m42 │     step, episode = [96mself[39m._step(policy, step, episode)                                     [31m│
+[31m│[39m   43                                                                                             [31m│
+[31m│[39m   44   [94mdef[39m [92m_step[39m([96mself[39m, policy, step, episode):                                                   [31m│
+[31m│[39m   45 │   [94massert[39m [96mall[39m([96mlen[39m(x) == [96mlen[39m([96mself[39m._env) [94mfor[39m x [95min[39m [96mself[39m._acts.values())                       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mdriver.py[22m:[94m47[39m in [92m_step[39m   [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   44   [94mdef[39m [92m_step[39m([96mself[39m, policy, step, episode):                                                   [31m│
+[31m│[39m   45 │   [94massert[39m [96mall[39m([96mlen[39m(x) == [96mlen[39m([96mself[39m._env) [94mfor[39m x [95min[39m [96mself[39m._acts.values())                       [31m│
+[31m│[39m   46 │   acts = {k: v [94mfor[39m k, v [95min[39m [96mself[39m._acts.items() [94mif[39m [95mnot[39m k.startswith([33m'log_'[39m)}                [31m│
+[31m│[39m [31m❱ [39m47 │   obs = [96mself[39m._env.step(acts)                                                              [31m│
+[31m│[39m   48 │   obs = {k: convert(v) [94mfor[39m k, v [95min[39m obs.items()}                                           [31m│
+[31m│[39m   49 │   [94massert[39m [96mall[39m([96mlen[39m(x) == [96mlen[39m([96mself[39m._env) [94mfor[39m x [95min[39m obs.values()), obs                         [31m│
+[31m│[39m   50 │   acts, [96mself[39m._state = policy(obs, [96mself[39m._state, **[96mself[39m._kwargs)                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mbatch.py[22m:[94m34[39m in [92mstep[39m     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   31 │     act = {k: v[i] [94mfor[39m k, v [95min[39m action.items()}                                            [31m│
+[31m│[39m   32 │     obs.append(env.step(act))                                                             [31m│
+[31m│[39m   33 │   [94mif[39m [96mself[39m._parallel:                                                                      [31m│
+[31m│[39m [31m❱ [39m34 │     obs = [ob() [94mfor[39m ob [95min[39m obs]                                                            [31m│
+[31m│[39m   35 │   [94mreturn[39m {k: np.array([ob[k] [94mfor[39m ob [95min[39m obs]) [94mfor[39m k [95min[39m obs[[94m0[39m]}                             [31m│
+[31m│[39m   36                                                                                             [31m│
+[31m│[39m   37   [94mdef[39m [92mrender[39m([96mself[39m):                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mbatch.py[22m:[94m34[39m in          [31m│
+[31m│[39m [92m<listcomp>[39m                                                                                       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   31 │     act = {k: v[i] [94mfor[39m k, v [95min[39m action.items()}                                            [31m│
+[31m│[39m   32 │     obs.append(env.step(act))                                                             [31m│
+[31m│[39m   33 │   [94mif[39m [96mself[39m._parallel:                                                                      [31m│
+[31m│[39m [31m❱ [39m34 │     obs = [ob() [94mfor[39m ob [95min[39m obs]                                                            [31m│
+[31m│[39m   35 │   [94mreturn[39m {k: np.array([ob[k] [94mfor[39m ob [95min[39m obs]) [94mfor[39m k [95min[39m obs[[94m0[39m]}                             [31m│
+[31m│[39m   36                                                                                             [31m│
+[31m│[39m   37   [94mdef[39m [92mrender[39m([96mself[39m):                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mworker.py[22m:[94m230[39m in        [31m│
+[31m│[39m [92m__call__[39m                                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   227                                                                                            [31m│
+[31m│[39m   228   [94mdef[39m [92m__call__[39m([96mself[39m):                                                                      [31m│
+[31m│[39m   229 │   [94mif[39m [95mnot[39m [96mself[39m._complete:                                                                 [31m│
+[31m│[39m [31m❱ [39m230 │     [96mself[39m._result = [96mself[39m._receive([96mself[39m._callid)                                           [31m│
+[31m│[39m   231 │     [96mself[39m._complete = [94mTrue[39m                                                                [31m│
+[31m│[39m   232 │   [94mreturn[39m [96mself[39m._result                                                                    [31m│
+[31m│[39m   233                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/[1mworker.py[22m:[94m174[39m in        [31m│
+[31m│[39m [92m_receive[39m                                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   171   [94mdef[39m [92m_receive[39m([96mself[39m, callid):                                                              [31m│
+[31m│[39m   172 │   [94mwhile[39m callid [95mnot[39m [95min[39m [96mself[39m._results:                                                     [31m│
+[31m│[39m   173 │     [94mtry[39m:                                                                                 [31m│
+[31m│[39m [31m❱ [39m174 │   │   message, callid, payload = [96mself[39m._pipe.recv()                                       [31m│
+[31m│[39m   175 │     [94mexcept[39m ([96mOSError[39m, [96mEOFError[39m):                                                          [31m│
+[31m│[39m   176 │   │   [94mraise[39m [96mRuntimeError[39m([33m'Lost connection to worker.'[39m)                                   [31m│
+[31m│[39m   177 │     [94mif[39m message == Message.ERROR:                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/[1mconnection.py[22m:[94m250[39m in [92mrecv[39m       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   247 │   │   [33m"""Receive a (picklable) object"""[39m                                                 [31m│
+[31m│[39m   248 │   │   [96mself[39m._check_closed()                                                               [31m│
+[31m│[39m   249 │   │   [96mself[39m._check_readable()                                                             [31m│
+[31m│[39m [31m❱ [39m250 │   │   buf = [96mself[39m._recv_bytes()                                                           [31m│
+[31m│[39m   251 │   │   [94mreturn[39m _ForkingPickler.loads(buf.getbuffer())                                      [31m│
+[31m│[39m   252 │                                                                                          [31m│
+[31m│[39m   253 │   [94mdef[39m [92mpoll[39m([96mself[39m, timeout=[94m0.0[39m):                                                           [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/[1mconnection.py[22m:[94m414[39m in            [31m│
+[31m│[39m [92m_recv_bytes[39m                                                                                      [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   411 │   │   │   │   [96mself[39m._send(header + buf)                                                   [31m│
+[31m│[39m   412 │                                                                                          [31m│
+[31m│[39m   413 │   [94mdef[39m [92m_recv_bytes[39m([96mself[39m, maxsize=[94mNone[39m):                                                   [31m│
+[31m│[39m [31m❱ [39m414 │   │   buf = [96mself[39m._recv([94m4[39m)                                                                [31m│
+[31m│[39m   415 │   │   size, = struct.unpack([33m"!i"[39m, buf.getvalue())                                        [31m│
+[31m│[39m   416 │   │   [94mif[39m size == -[94m1[39m:                                                                     [31m│
+[31m│[39m   417 │   │   │   buf = [96mself[39m._recv([94m8[39m)                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/[1mconnection.py[22m:[94m379[39m in [92m_recv[39m      [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   376 │   │   handle = [96mself[39m._handle                                                              [31m│
+[31m│[39m   377 │   │   remaining = size                                                                   [31m│
+[31m│[39m   378 │   │   [94mwhile[39m remaining > [94m0[39m:                                                               [31m│
+[31m│[39m [31m❱ [39m379 │   │   │   chunk = read(handle, remaining)                                                [31m│
+[31m│[39m   380 │   │   │   n = [96mlen[39m(chunk)                                                                 [31m│
+[31m│[39m   381 │   │   │   [94mif[39m n == [94m0[39m:                                                                     [31m│
+[31m│[39m   382 │   │   │   │   [94mif[39m remaining == size:                                                      [31m│
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+[1mKeyboardInterrupt

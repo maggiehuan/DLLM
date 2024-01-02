@@ -1,0 +1,57 @@
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {'transition_tokens': (384,)}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {'transition_tokens': (384,)}
+JAX devices (1): [cuda(id=0)]
+Policy devices: cuda:0
+Train devices:  cuda:0
+Tracing train function.
+no rnd data in data
+Optimizer model_opt has 197,057,283 variables.
+Optimizer actor_opt has 9,464,849 variables.
+Optimizer critic_opt has 9,708,799 variables.
+Logdir /home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2
+Observation space:
+  image            Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255)
+  transition_tokens Space(dtype=uint32, shape=(384,), low=0, high=4294967295)
+  goal_tokens      Space(dtype=uint32, shape=(5, 384), low=0, high=4294967295)
+  goal_id          Space(dtype=uint32, shape=(5,), low=0, high=4294967295)
+  reward           Space(dtype=float32, shape=(), low=-inf, high=inf)
+  is_first         Space(dtype=bool, shape=(), low=False, high=True)
+  is_last          Space(dtype=bool, shape=(), low=False, high=True)
+  is_terminal      Space(dtype=bool, shape=(), low=False, high=True)
+  log_reward       Space(dtype=float32, shape=(1,), low=-inf, high=inf)
+  log_achievement_collect_coal Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_diamond Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_drink Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_iron Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_sapling Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_wood Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_skeleton Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_zombie Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_cow Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_furnace Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_table Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_wake_up Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+Action space:
+  action           Space(dtype=float32, shape=(17,), low=0, high=1)
+  reset            Space(dtype=bool, shape=(), low=False, high=True)
+Prefill train dataset.
+Prefill eval dataset.
+Found existing checkpoint.
+Loading checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2/checkpoint.ckpt
+Loaded checkpoint from 36233 seconds ago.
+Start training loop.
+Starting evaluation at step 24300
+Tracing policy function.
+Tracing policy function.

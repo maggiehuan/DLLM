@@ -1,0 +1,99 @@
+2024-01-02 17:49:43,605 INFO    StreamThr :11528 [internal.py:wandb_internal():86] W&B internal server running at pid: 11528, started at: 2024-01-02 17:49:43.604467
+2024-01-02 17:49:43,606 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status
+2024-01-02 17:49:43,609 INFO    WriterThread:11528 [datastore.py:open_for_write():85] open: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/run-slcs4ech.wandb
+2024-01-02 17:49:43,609 DEBUG   SenderThread:11528 [sender.py:send():380] send: header
+2024-01-02 17:49:43,614 DEBUG   SenderThread:11528 [sender.py:send():380] send: run
+2024-01-02 17:49:43,634 INFO    SenderThread:11528 [sender.py:_maybe_setup_resume():759] checking resume status for None/crafter_reward/slcs4ech
+2024-01-02 17:49:44,000 INFO    SenderThread:11528 [dir_watcher.py:__init__():211] watching files in: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files
+2024-01-02 17:49:44,001 INFO    SenderThread:11528 [sender.py:_start_run_threads():1124] run started: slcs4ech with start time 1704217783.604459
+2024-01-02 17:49:44,008 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: check_version
+2024-01-02 17:49:44,008 DEBUG   SenderThread:11528 [sender.py:send_request():407] send_request: check_version
+2024-01-02 17:49:44,087 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: run_start
+2024-01-02 17:49:44,094 DEBUG   HandlerThread:11528 [system_info.py:__init__():32] System info init
+2024-01-02 17:49:44,094 DEBUG   HandlerThread:11528 [system_info.py:__init__():47] System info init done
+2024-01-02 17:49:44,094 INFO    HandlerThread:11528 [system_monitor.py:start():194] Starting system monitor
+2024-01-02 17:49:44,094 INFO    SystemMonitor:11528 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-02 17:49:44,094 INFO    HandlerThread:11528 [system_monitor.py:probe():214] Collecting system info
+2024-01-02 17:49:44,095 INFO    SystemMonitor:11528 [interfaces.py:start():190] Started cpu monitoring
+2024-01-02 17:49:44,095 INFO    SystemMonitor:11528 [interfaces.py:start():190] Started disk monitoring
+2024-01-02 17:49:44,096 INFO    SystemMonitor:11528 [interfaces.py:start():190] Started gpu monitoring
+2024-01-02 17:49:44,097 INFO    SystemMonitor:11528 [interfaces.py:start():190] Started memory monitoring
+2024-01-02 17:49:44,099 INFO    SystemMonitor:11528 [interfaces.py:start():190] Started network monitoring
+2024-01-02 17:49:44,132 DEBUG   HandlerThread:11528 [system_info.py:probe():196] Probing system
+2024-01-02 17:49:44,134 DEBUG   HandlerThread:11528 [system_info.py:_probe_git():181] Probing git
+2024-01-02 17:49:44,140 DEBUG   HandlerThread:11528 [system_info.py:_probe_git():189] Probing git done
+2024-01-02 17:49:44,140 DEBUG   HandlerThread:11528 [system_info.py:probe():244] Probing system done
+2024-01-02 17:49:44,140 DEBUG   HandlerThread:11528 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-1109-azure-x86_64-with-glibc2.27', 'python': '3.10.13', 'heartbeatAt': '2024-01-02T17:49:44.132452', 'startedAt': '2024-01-02T17:49:43.599776', 'docker': None, 'cuda': None, 'args': ('--run.script', 'train_eval', '--use_wandb', 'True', '--logdir', '/home/ziyu/logdir/ziyu_crafter_cuda_1_seed_1', '--configs', 'crafter'), 'state': 'running', 'program': '/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py', 'codePathLocal': 'LID-rnd/train.py', 'codePath': 'LID-rnd/train.py', 'git': {'remote': None, 'commit': '7dd4611caeb7176a0cd23a09b607771fcfe4a94f'}, 'email': 'ziyuhuan@outlook.com', 'root': '/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu', 'host': 'Atari-ML-001', 'username': 'ziyu', 'executable': '/home/ziyu/anaconda3/envs/jaxpy39/bin/python', 'cpu_count': 24, 'cpu_count_logical': 24, 'cpu_freq': {'current': 2593.991999999999, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}, {'current': 2593.992, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 991.2787780761719, 'used': 767.7726745605469}}, 'gpu': 'Tesla V100-PCIE-16GB', 'gpu_count': 4, 'gpu_devices': [{'name': 'Tesla V100-PCIE-16GB', 'memory_total': 17179869184}, {'name': 'Tesla V100-PCIE-16GB', 'memory_total': 17179869184}, {'name': 'Tesla V100-PCIE-16GB', 'memory_total': 17179869184}, {'name': 'Tesla V100-PCIE-16GB', 'memory_total': 17179869184}], 'memory': {'total': 440.9004783630371}}
+2024-01-02 17:49:44,140 INFO    HandlerThread:11528 [system_monitor.py:probe():224] Finished collecting system info
+2024-01-02 17:49:44,140 INFO    HandlerThread:11528 [system_monitor.py:probe():227] Publishing system info
+2024-01-02 17:49:44,140 DEBUG   HandlerThread:11528 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-01-02 17:49:44,141 DEBUG   HandlerThread:11528 [system_info.py:_save_pip():68] Saving pip packages done
+2024-01-02 17:49:44,141 DEBUG   HandlerThread:11528 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2024-01-02 17:49:45,002 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/requirements.txt
+2024-01-02 17:49:45,002 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/conda-environment.yaml
+2024-01-02 17:49:49,285 DEBUG   HandlerThread:11528 [system_info.py:_save_conda():87] Saving conda packages done
+2024-01-02 17:49:49,286 INFO    HandlerThread:11528 [system_monitor.py:probe():229] Finished publishing system info
+2024-01-02 17:49:49,290 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:49:49,290 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: keepalive
+2024-01-02 17:49:49,291 DEBUG   SenderThread:11528 [sender.py:send():380] send: files
+2024-01-02 17:49:49,291 INFO    SenderThread:11528 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2024-01-02 17:49:49,297 DEBUG   SenderThread:11528 [sender.py:send():380] send: telemetry
+2024-01-02 17:49:49,298 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:49:49,300 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:49:49,300 DEBUG   SenderThread:11528 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:49:49,672 INFO    wandb-upload_0:11528 [upload_job.py:push():131] Uploaded file /tmp/tmptfp9bybcwandb/yq1kwnr7-wandb-metadata.json
+2024-01-02 17:49:50,002 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/conda-environment.yaml
+2024-01-02 17:49:50,002 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/wandb-metadata.json
+2024-01-02 17:49:54,444 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:49:57,004 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:49:59,005 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:00,071 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:01,006 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:03,006 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:04,335 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:50:04,400 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:50:04,400 DEBUG   SenderThread:11528 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:50:05,483 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:09,008 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:10,812 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:15,010 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:16,008 DEBUG   SenderThread:11528 [sender.py:send():380] send: telemetry
+2024-01-02 17:50:16,012 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:16,136 DEBUG   SenderThread:11528 [sender.py:send():380] send: telemetry
+2024-01-02 17:50:17,013 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/config.yaml
+2024-01-02 17:50:19,319 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:50:19,323 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:50:19,324 DEBUG   SenderThread:11528 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:50:21,015 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:21,426 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:26,896 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:27,017 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:29,017 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:31,018 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:32,667 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:34,307 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:50:34,319 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:50:34,319 DEBUG   SenderThread:11528 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:50:38,468 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:41,022 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:43,023 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:43,868 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:44,102 DEBUG   SystemMonitor:11528 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-02 17:50:44,104 DEBUG   SenderThread:11528 [sender.py:send():380] send: stats
+2024-01-02 17:50:45,024 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/output.log
+2024-01-02 17:50:49,109 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:49,396 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:50:49,396 DEBUG   SenderThread:11528 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:50:49,442 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:50:50,025 INFO    Thread-12 :11528 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_174943-slcs4ech/files/config.yaml
+2024-01-02 17:50:54,479 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:50:59,479 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:51:04,313 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:51:04,323 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:51:04,324 DEBUG   SenderThread:11528 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:51:04,496 DEBUG   HandlerThread:11528 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:51:08,123 INFO    memory    :11528 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2024-01-02 17:51:08,123 DEBUG   SystemMonitor:11528 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-01-02 17:51:08,124 DEBUG   SystemMonitor:11528 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-01-02 17:51:08,126 DEBUG   SenderThread:11528 [sender.py:send():380] send: stats
+2024-01-02 17:51:09,107 INFO    MainThread:11528 [internal.py:handle_exit():76] Internal process exited

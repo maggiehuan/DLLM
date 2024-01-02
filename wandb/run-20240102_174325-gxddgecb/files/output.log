@@ -1,0 +1,310 @@
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {'transition_tokens': (384,)}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {'transition_tokens': (384,)}
+JAX devices (1): [cuda(id=0)]
+Policy devices: cuda:0
+Train devices:  cuda:0
+Tracing train function.
+no rnd data in data
+Optimizer model_opt has 197,057,283 variables.
+Optimizer actor_opt has 9,464,849 variables.
+Optimizer critic_opt has 9,708,799 variables.
+Logdir /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0
+Observation space:
+  image            Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255)
+  transition_tokens Space(dtype=uint32, shape=(384,), low=0, high=4294967295)
+  goal_tokens      Space(dtype=uint32, shape=(5, 384), low=0, high=4294967295)
+  goal_id          Space(dtype=uint32, shape=(5,), low=0, high=4294967295)
+  reward           Space(dtype=float32, shape=(), low=-inf, high=inf)
+  is_first         Space(dtype=bool, shape=(), low=False, high=True)
+  is_last          Space(dtype=bool, shape=(), low=False, high=True)
+  is_terminal      Space(dtype=bool, shape=(), low=False, high=True)
+  log_reward       Space(dtype=float32, shape=(1,), low=-inf, high=inf)
+  log_achievement_collect_coal Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_diamond Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_drink Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_iron Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_sapling Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_wood Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_skeleton Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_zombie Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_cow Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_furnace Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_table Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_wake_up Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+Action space:
+  action           Space(dtype=float32, shape=(17,), low=0, high=1)
+  reset            Space(dtype=bool, shape=(), low=False, high=True)
+Prefill train dataset.
+Prefill eval dataset.
+Found existing checkpoint.
+Loading checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0/checkpoint.ckpt
+Loaded checkpoint from 35867 seconds ago.
+Start training loop.
+Starting evaluation at step 30600
+Tracing policy function.
+Tracing policy function.
+Episode has 186 steps and return 3.1.
+Tracing policy function.
+Tracing train function.
+Tracing report function.
+Tracing report function.
+Tracing report function.
+────────────────────────────────── Step 30601 ──────────────────────────────────
+eval_episode/length 186 / eval_episode/score 3.1 / eval_episode/reward_rate 0.97
+/ eval_stats/sum_log_reward 3.1 / eval_stats/max_log_achievement_collect_drink
+15 / eval_stats/max_log_achievement_collect_sapling 1 /
+eval_stats/max_log_achievement_place_plant 1 /
+eval_stats/max_log_achievement_wake_up 3 / train/action_mag 16 /
+train/action_max 16 / train/action_mean 4.48 / train/action_min 0 /
+train/action_std 3.46 / train/actor_opt_actor_opt_grad_overflow 0 /
+train/actor_opt_actor_opt_grad_scale 1e4 / train/actor_opt_grad_norm 0.06 /
+train/actor_opt_grad_steps 1.5e4 / train/actor_opt_loss 16.96 / train/adv_mag
+0.69 / train/adv_max 0.69 / train/adv_mean 5.6e-3 / train/adv_min -0.52 /
+train/adv_std 0.08 / train/cont_avg 1 / train/cont_loss_mean 1.7e-6 /
+train/cont_loss_std 2e-5 / train/cont_neg_acc 1 / train/cont_neg_loss 2.8e-4 /
+train/cont_pos_acc 1 / train/cont_pos_loss 2.9e-7 / train/cont_pred 1 /
+train/cont_rate 1 / train/dyn_loss_mean 4.56 / train/dyn_loss_std 8.02 /
+train/extr_critic_critic_opt_critic_opt_grad_overflow 0 /
+train/extr_critic_critic_opt_critic_opt_grad_scale 1e4 /
+train/extr_critic_critic_opt_grad_norm 1.18 /
+train/extr_critic_critic_opt_grad_steps 1.5e4 /
+train/extr_critic_critic_opt_loss 1.6e4 / train/extr_critic_mag 8.69 /
+train/extr_critic_max 8.69 / train/extr_critic_mean 2.01 / train/extr_critic_min
+-0.34 / train/extr_critic_std 1.39 / train/extr_return_normed_mag 1.77 /
+train/extr_return_normed_max 1.77 / train/extr_return_normed_mean 0.39 /
+train/extr_return_normed_min -0.22 / train/extr_return_normed_std 0.31 /
+train/extr_return_rate 0.91 / train/extr_return_raw_mag 8.45 /
+train/extr_return_raw_max 8.45 / train/extr_return_raw_mean 2.04 /
+train/extr_return_raw_min -0.76 / train/extr_return_raw_std 1.42 /
+train/extr_reward_mag 1 / train/extr_reward_max 1 / train/extr_reward_mean 0.02
+/ train/extr_reward_min -0.71 / train/extr_reward_std 0.15 /
+train/image_loss_mean 5.9 / train/image_loss_std 10.13 / train/model_loss_mean
+8.67 / train/model_loss_std 13.77 / train/model_opt_grad_norm 78.36 /
+train/model_opt_grad_steps 1.5e4 / train/model_opt_loss 1.1e4 /
+train/model_opt_model_opt_grad_overflow 0 / train/model_opt_model_opt_grad_scale
+1250 / train/policy_entropy_mag 2.37 / train/policy_entropy_max 2.37 /
+train/policy_entropy_mean 0.52 / train/policy_entropy_min 0.08 /
+train/policy_entropy_std 0.54 / train/policy_logprob_mag 7.44 /
+train/policy_logprob_max -9.5e-3 / train/policy_logprob_mean -0.52 /
+train/policy_logprob_min -7.44 / train/policy_logprob_std 1.08 /
+train/policy_randomness_mag 0.84 / train/policy_randomness_max 0.84 /
+train/policy_randomness_mean 0.18 / train/policy_randomness_min 0.03 /
+train/policy_randomness_std 0.19 / train/post_ent_mag 39.99 / train/post_ent_max
+39.99 / train/post_ent_mean 23.47 / train/post_ent_min 11.62 /
+train/post_ent_std 5.1 / train/prior_ent_mag 66.82 / train/prior_ent_max 66.82 /
+train/prior_ent_mean 27.58 / train/prior_ent_min 11.66 / train/prior_ent_std
+9.08 / train/rep_loss_mean 4.56 / train/rep_loss_std 8.02 / train/reward_avg
+0.01 / train/reward_loss_mean 0.04 / train/reward_loss_std 0.23 /
+train/reward_max_data 1 / train/reward_max_pred 1 / train/reward_neg_acc 1 /
+train/reward_neg_loss 0.02 / train/reward_pos_acc 1 / train/reward_pos_loss 0.76
+/ train/reward_pred 0.01 / train/reward_rate 0.02 /
+train/transition_tokens_loss_mean 1.2e-4 / train/transition_tokens_loss_std
+4.2e-6 / train/params_agent/wm/model_opt 2e8 /
+train/params_agent/task_behavior/critic/critic_opt 9.7e6 /
+train/params_agent/task_behavior/ac/actor_opt 9.5e6 / report/cont_avg 1 /
+report/cont_loss_mean 2.6e-6 / report/cont_loss_std 3.3e-5 / report/cont_neg_acc
+1 / report/cont_neg_loss 3.4e-4 / report/cont_pos_acc 1 / report/cont_pos_loss
+9.9e-7 / report/cont_pred 1 / report/cont_rate 1 / report/dyn_loss_mean 4.34 /
+report/dyn_loss_std 7.69 / report/image_loss_mean 5.32 / report/image_loss_std
+8.42 / report/model_loss_mean 7.96 / report/model_loss_std 11.91 /
+report/post_ent_mag 41.91 / report/post_ent_max 41.91 / report/post_ent_mean
+23.55 / report/post_ent_min 11.98 / report/post_ent_std 5.04 /
+report/prior_ent_mag 66.86 / report/prior_ent_max 66.86 / report/prior_ent_mean
+27.66 / report/prior_ent_min 11.14 / report/prior_ent_std 9.15 /
+report/rep_loss_mean 4.34 / report/rep_loss_std 7.69 / report/reward_avg 0.01 /
+report/reward_loss_mean 0.04 / report/reward_loss_std 0.23 /
+report/reward_max_data 1 / report/reward_max_pred 1 / report/reward_neg_acc 1 /
+report/reward_neg_loss 0.02 / report/reward_pos_acc 1 / report/reward_pos_loss
+0.69 / report/reward_pred 0.01 / report/reward_rate 0.02 /
+report/transition_tokens_loss_mean 9.6e-5 / report/transition_tokens_loss_std
+3.9e-6 / eval/cont_avg 1 / eval/cont_loss_mean 6.2e-3 / eval/cont_loss_std 0.2 /
+eval/cont_neg_acc 0 / eval/cont_neg_loss 6.38 / eval/cont_pos_acc 1 /
+eval/cont_pos_loss 3e-7 / eval/cont_pred 1 / eval/cont_rate 1 /
+eval/dyn_loss_mean 20.03 / eval/dyn_loss_std 13.58 / eval/image_loss_mean 35.04
+/ eval/image_loss_std 52.85 / eval/model_loss_mean 47.11 / eval/model_loss_std
+57.6 / eval/post_ent_mag 39.27 / eval/post_ent_max 39.27 / eval/post_ent_mean
+25.36 / eval/post_ent_min 10.18 / eval/post_ent_std 5.59 / eval/prior_ent_mag
+66.86 / eval/prior_ent_max 66.86 / eval/prior_ent_mean 32.98 /
+eval/prior_ent_min 12.03 / eval/prior_ent_std 9.76 / eval/rep_loss_mean 20.03 /
+eval/rep_loss_std 13.58 / eval/reward_avg 8.7e-3 / eval/reward_loss_mean 0.05 /
+eval/reward_loss_std 0.6 / eval/reward_max_data 1 / eval/reward_max_pred 1 /
+eval/reward_neg_acc 1 / eval/reward_neg_loss 9.7e-3 / eval/reward_pos_acc 0.5 /
+eval/reward_pos_loss 4.29 / eval/reward_pred 3.4e-3 / eval/reward_rate 9.8e-3 /
+eval/transition_tokens_loss_mean 9.5e-5 / eval/transition_tokens_loss_std 3.5e-6
+/ replay/size 7.8e4 / replay/inserts 0 / replay/samples 112 /
+replay/insert_wait_avg nan / replay/insert_wait_frac nan /
+replay/sample_wait_avg 1.8e-6 / replay/sample_wait_frac 1 / eval_replay/size
+2954 / eval_replay/inserts 124 / eval_replay/samples 112 /
+eval_replay/insert_wait_avg 4e-6 / eval_replay/insert_wait_frac 1 /
+eval_replay/sample_wait_avg 2.3e-6 / eval_replay/sample_wait_frac 1 /
+timer/duration 163.33 / timer/replay._sample_count 112 /
+timer/replay._sample_total 20.62 / timer/replay._sample_frac 0.13 /
+timer/replay._sample_avg 0.18 / timer/replay._sample_min 0.06 /
+timer/replay._sample_max 1.27 / timer/agent.policy_count 188 /
+timer/agent.policy_total 8.86 / timer/agent.policy_frac 0.05 /
+timer/agent.policy_avg 0.05 / timer/agent.policy_min 8.4e-3 /
+timer/agent.policy_max 5.06 / timer/env.step_count 1 / timer/env.step_total 1.41
+/ timer/env.step_frac 8.6e-3 / timer/env.step_avg 1.41 / timer/env.step_min 1.41
+/ timer/env.step_max 1.41 / timer/dataset_train_count 1 /
+timer/dataset_train_total 6.5e-5 / timer/dataset_train_frac 4e-7 /
+timer/dataset_train_avg 6.5e-5 / timer/dataset_train_min 6.5e-5 /
+timer/dataset_train_max 6.5e-5 / timer/agent.train_count 1 /
+timer/agent.train_total 100.03 / timer/agent.train_frac 0.61 /
+timer/agent.train_avg 100.03 / timer/agent.train_min 100.03 /
+timer/agent.train_max 100.03 / timer/agent.report_count 2 /
+timer/agent.report_total 22.21 / timer/agent.report_frac 0.14 /
+timer/agent.report_avg 11.1 / timer/agent.report_min 6.2 /
+timer/agent.report_max 16.01 / timer/dataset_eval_count 1 /
+timer/dataset_eval_total 7.3e-5 / timer/dataset_eval_frac 4.5e-7 /
+timer/dataset_eval_avg 7.3e-5 / timer/dataset_eval_min 7.3e-5 /
+timer/dataset_eval_max 7.3e-5
+Creating new TensorBoard event file writer.
+wandb: WARNING Found log directory outside of given root_logdir, dropping given root_logdir for event file in /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0
+Episode has 116 steps and return 3.1.
+Episode has 187 steps and return 2.1.
+Episode has 220 steps and return 4.1.
+Traceback (most recent call last):
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 229, in <module>
+    main()
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 69, in main
+    embodied.run.train_eval(
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/train_eval.py", line 146, in train_eval
+    driver_train(policy_train, steps=100)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/driver.py", line 42, in __call__
+    step, episode = self._step(policy, step, episode)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/driver.py", line 65, in _step
+    [fn(trn, i, **self._kwargs) for fn in self._on_steps]
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/driver.py", line 65, in <listcomp>
+    [fn(trn, i, **self._kwargs) for fn in self._on_steps]
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/train_eval.py", line 108, in train_step
+    outs, state[0], mets = agent.train(batch[0], state[0])
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/jaxagent.py", line 75, in train
+    (outs, state, mets), self.varibs = self._train(
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/ninjax.py", line 208, in wrapper
+    out, updated = apply(statics, selected, rng, *args, **kw)
+  File "<string>", line 1, in <lambda>
+KeyboardInterrupt
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py:229 in   │
+│ <module>                                                                     │
+│                                                                              │
+│   226                                                                        │
+│   227                                                                        │
+│   228 if __name__ == '__main__':                                             │
+│ ❱ 229   main()                                                               │
+│   230                                                                        │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py:69 in    │
+│ main                                                                         │
+│                                                                              │
+│    66 │     eval_env = make_envs(config)  # mode='eval'                      │
+│    67 │     cleanup += [env, eval_env]                                       │
+│    68 │     agent = agt.Agent(env.obs_space, env.act_space, step, config)    │
+│ ❱  69 │     embodied.run.train_eval(                                         │
+│    70 │   │     agent, env, eval_env, replay, eval_replay, logger, args)     │
+│    71 │                                                                      │
+│    72 │   elif args.script == 'train_holdout':                               │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/trai │
+│ n_eval.py:146 in train_eval                                                  │
+│                                                                              │
+│   143 │     print('Starting evaluation at step', int(step))                  │
+│   144 │     driver_eval.reset()                                              │
+│   145 │     driver_eval(policy_eval, episodes=max(len(eval_env), args.eval_e │
+│ ❱ 146 │   driver_train(policy_train, steps=100)                              │
+│   147 │   if should_save(step):                                              │
+│   148 │     checkpoint.save()                                                │
+│   149   logger.write()                                                       │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/dri │
+│ ver.py:42 in __call__                                                        │
+│                                                                              │
+│   39   def __call__(self, policy, steps=0, episodes=0):                      │
+│   40 │   step, episode = 0, 0                                                │
+│   41 │   while step < steps or episode < episodes:                           │
+│ ❱ 42 │     step, episode = self._step(policy, step, episode)                 │
+│   43                                                                         │
+│   44   def _step(self, policy, step, episode):                               │
+│   45 │   assert all(len(x) == len(self._env) for x in self._acts.values())   │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/dri │
+│ ver.py:65 in _step                                                           │
+│                                                                              │
+│   62 │   for i in range(len(self._env)):                                     │
+│   63 │     trn = {k: v[i] for k, v in trns.items()}                          │
+│   64 │     [self._eps[i][k].append(v) for k, v in trn.items()]               │
+│ ❱ 65 │     [fn(trn, i, **self._kwargs) for fn in self._on_steps]             │
+│   66 │     step += 1                                                         │
+│   67 │   if obs['is_last'].any():                                            │
+│   68 │     for i, done in enumerate(obs['is_last']):                         │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/dri │
+│ ver.py:65 in <listcomp>                                                      │
+│                                                                              │
+│   62 │   for i in range(len(self._env)):                                     │
+│   63 │     trn = {k: v[i] for k, v in trns.items()}                          │
+│   64 │     [self._eps[i][k].append(v) for k, v in trn.items()]               │
+│ ❱ 65 │     [fn(trn, i, **self._kwargs) for fn in self._on_steps]             │
+│   66 │     step += 1                                                         │
+│   67 │   if obs['is_last'].any():                                            │
+│   68 │     for i, done in enumerate(obs['is_last']):                         │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/trai │
+│ n_eval.py:108 in train_step                                                  │
+│                                                                              │
+│   105 │     #----give intrinsic rewards to batch sampled>>>>                 │
+│   106 │     batch[0]['rnd'] = get_intrinsic_and_update_rnd(batch)            │
+│   107 │     #-------------------------------------------<<<<                 │
+│ ❱ 108 │     outs, state[0], mets = agent.train(batch[0], state[0])           │
+│   109 │     metrics.add(mets, prefix='train')                                │
+│   110 │     if 'priority' in outs:                                           │
+│   111 │   │   train_replay.prioritize(outs['key'], outs['priority'])         │
+│                                                                              │
+│ /home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/contextlib.py:79 in inner   │
+│                                                                              │
+│    76 │   │   @wraps(func)                                                   │
+│    77 │   │   def inner(*args, **kwds):                                      │
+│    78 │   │   │   with self._recreate_cm():                                  │
+│ ❱  79 │   │   │   │   return func(*args, **kwds)                             │
+│    80 │   │   return inner                                                   │
+│    81                                                                        │
+│    82                                                                        │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/jaxagent.py:75 in │
+│ train                                                                        │
+│                                                                              │
+│    72 │   #----                                                              │
+│    73 │   data = self._convert_inps(data, self.policy_devices)               │
+│    74 │   #----                                                              │
+│ ❱  75 │   (outs, state, mets), self.varibs = self._train(                    │
+│    76 │   │   self.varibs, rng, data, state)                                 │
+│    77 │   outs = self._convert_outs(outs, self.train_devices)                │
+│    78 │   self._updates.increment()                                          │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/ninjax.py:208 in  │
+│ wrapper                                                                      │
+│                                                                              │
+│   205 │     return state                                                     │
+│   206 │   else:                                                              │
+│   207 │     selected = {k: v for k, v in state.items() if k in wrapper.keys} │
+│ ❱ 208 │     out, updated = apply(statics, selected, rng, *args, **kw)        │
+│   209 │     return out, {**state, **updated}                                 │
+│   210   return wrapper                                                       │
+│   211                                                                        │
+│ in <lambda>:1                                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+KeyboardInterrupt

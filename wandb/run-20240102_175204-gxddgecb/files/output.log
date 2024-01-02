@@ -1,0 +1,172 @@
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {'transition_tokens': (384,)}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {'transition_tokens': (384,)}
+JAX devices (1): [cuda(id=0)]
+Policy devices: cuda:0
+Train devices:  cuda:0
+Tracing train function.
+no rnd data in data
+Optimizer model_opt has 197,057,283 variables.
+Optimizer actor_opt has 9,464,849 variables.
+Optimizer critic_opt has 9,708,799 variables.
+Logdir /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0
+Observation space:
+  image            Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255)
+  transition_tokens Space(dtype=uint32, shape=(384,), low=0, high=4294967295)
+  goal_tokens      Space(dtype=uint32, shape=(5, 384), low=0, high=4294967295)
+  goal_id          Space(dtype=uint32, shape=(5,), low=0, high=4294967295)
+  reward           Space(dtype=float32, shape=(), low=-inf, high=inf)
+  is_first         Space(dtype=bool, shape=(), low=False, high=True)
+  is_last          Space(dtype=bool, shape=(), low=False, high=True)
+  is_terminal      Space(dtype=bool, shape=(), low=False, high=True)
+  log_reward       Space(dtype=float32, shape=(1,), low=-inf, high=inf)
+  log_achievement_collect_coal Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_diamond Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_drink Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_iron Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_sapling Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_wood Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_skeleton Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_zombie Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_cow Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_furnace Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_table Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_wake_up Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+Action space:
+  action           Space(dtype=float32, shape=(17,), low=0, high=1)
+  reset            Space(dtype=bool, shape=(), low=False, high=True)
+Prefill train dataset.
+Prefill eval dataset.
+Found existing checkpoint.
+Loading checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0/checkpoint.ckpt
+Loaded checkpoint from 36383 seconds ago.
+Start training loop.
+Starting evaluation at step 30600
+Tracing policy function.
+Tracing policy function.
+Episode has 155 steps and return 2.1.
+Tracing policy function.
+Tracing train function.
+Tracing report function.
+Tracing report function.
+Tracing report function.
+────────────────────────────────── Step 30601 ──────────────────────────────────
+eval_episode/length 155 / eval_episode/score 2.1 / eval_episode/reward_rate 0.97
+/ eval_stats/sum_log_reward 2.1 / eval_stats/max_log_achievement_collect_drink 1
+/ eval_stats/max_log_achievement_collect_sapling 1 /
+eval_stats/max_log_achievement_wake_up 2 / train/action_mag 16 /
+train/action_max 16 / train/action_mean 4.51 / train/action_min 0 /
+train/action_std 3.46 / train/actor_opt_actor_opt_grad_overflow 0 /
+train/actor_opt_actor_opt_grad_scale 1e4 / train/actor_opt_grad_norm 0.05 /
+train/actor_opt_grad_steps 1.5e4 / train/actor_opt_loss 34.96 / train/adv_mag
+0.77 / train/adv_max 0.77 / train/adv_mean 6.9e-3 / train/adv_min -0.61 /
+train/adv_std 0.07 / train/cont_avg 1 / train/cont_loss_mean 1.8e-6 /
+train/cont_loss_std 2e-5 / train/cont_neg_acc 1 / train/cont_neg_loss 2.8e-4 /
+train/cont_pos_acc 1 / train/cont_pos_loss 4.2e-7 / train/cont_pred 1 /
+train/cont_rate 1 / train/dyn_loss_mean 4.57 / train/dyn_loss_std 7.98 /
+train/extr_critic_critic_opt_critic_opt_grad_overflow 0 /
+train/extr_critic_critic_opt_critic_opt_grad_scale 1e4 /
+train/extr_critic_critic_opt_grad_norm 1.2 /
+train/extr_critic_critic_opt_grad_steps 1.5e4 /
+train/extr_critic_critic_opt_loss 1.6e4 / train/extr_critic_mag 8.38 /
+train/extr_critic_max 8.38 / train/extr_critic_mean 2.02 / train/extr_critic_min
+-0.35 / train/extr_critic_std 1.4 / train/extr_return_normed_mag 1.63 /
+train/extr_return_normed_max 1.63 / train/extr_return_normed_mean 0.39 /
+train/extr_return_normed_min -0.22 / train/extr_return_normed_std 0.31 /
+train/extr_return_rate 0.92 / train/extr_return_raw_mag 7.82 /
+train/extr_return_raw_max 7.82 / train/extr_return_raw_mean 2.05 /
+train/extr_return_raw_min -0.77 / train/extr_return_raw_std 1.45 /
+train/extr_reward_mag 1 / train/extr_reward_max 1 / train/extr_reward_mean 0.02
+/ train/extr_reward_min -0.7 / train/extr_reward_std 0.15 /
+train/image_loss_mean 5.93 / train/image_loss_std 10.4 / train/model_loss_mean
+8.71 / train/model_loss_std 14 / train/model_opt_grad_norm 75.43 /
+train/model_opt_grad_steps 1.5e4 / train/model_opt_loss 1.1e4 /
+train/model_opt_model_opt_grad_overflow 0 / train/model_opt_model_opt_grad_scale
+1250 / train/policy_entropy_mag 2.38 / train/policy_entropy_max 2.38 /
+train/policy_entropy_mean 0.52 / train/policy_entropy_min 0.08 /
+train/policy_entropy_std 0.54 / train/policy_logprob_mag 7.44 /
+train/policy_logprob_max -9.5e-3 / train/policy_logprob_mean -0.52 /
+train/policy_logprob_min -7.44 / train/policy_logprob_std 1.07 /
+train/policy_randomness_mag 0.84 / train/policy_randomness_max 0.84 /
+train/policy_randomness_mean 0.19 / train/policy_randomness_min 0.03 /
+train/policy_randomness_std 0.19 / train/post_ent_mag 41.99 / train/post_ent_max
+41.99 / train/post_ent_mean 23.53 / train/post_ent_min 11.98 /
+train/post_ent_std 5.08 / train/prior_ent_mag 66.82 / train/prior_ent_max 66.82
+/ train/prior_ent_mean 27.53 / train/prior_ent_min 11.24 / train/prior_ent_std
+9.04 / train/rep_loss_mean 4.57 / train/rep_loss_std 7.98 / train/reward_avg
+0.01 / train/reward_loss_mean 0.04 / train/reward_loss_std 0.24 /
+train/reward_max_data 1 / train/reward_max_pred 1 / train/reward_neg_acc 1 /
+train/reward_neg_loss 0.03 / train/reward_pos_acc 1 / train/reward_pos_loss 0.72
+/ train/reward_pred 0.01 / train/reward_rate 0.02 /
+train/transition_tokens_loss_mean 1.2e-4 / train/transition_tokens_loss_std
+4.5e-6 / train/params_agent/wm/model_opt 2e8 /
+train/params_agent/task_behavior/critic/critic_opt 9.7e6 /
+train/params_agent/task_behavior/ac/actor_opt 9.5e6 / report/cont_avg 1 /
+report/cont_loss_mean 1.8e-6 / report/cont_loss_std 2.1e-5 / report/cont_neg_acc
+1 / report/cont_neg_loss 2.9e-4 / report/cont_pos_acc 1 / report/cont_pos_loss
+3.8e-7 / report/cont_pred 1 / report/cont_rate 1 / report/dyn_loss_mean 4.35 /
+report/dyn_loss_std 7.81 / report/image_loss_mean 5.42 / report/image_loss_std
+8.98 / report/model_loss_mean 8.07 / report/model_loss_std 12.63 /
+report/post_ent_mag 41.57 / report/post_ent_max 41.57 / report/post_ent_mean
+23.49 / report/post_ent_min 11.84 / report/post_ent_std 5.08 /
+report/prior_ent_mag 66.83 / report/prior_ent_max 66.83 / report/prior_ent_mean
+27.57 / report/prior_ent_min 11.61 / report/prior_ent_std 9.14 /
+report/rep_loss_mean 4.35 / report/rep_loss_std 7.81 / report/reward_avg 0.01 /
+report/reward_loss_mean 0.04 / report/reward_loss_std 0.22 /
+report/reward_max_data 1 / report/reward_max_pred 1 / report/reward_neg_acc 1 /
+report/reward_neg_loss 0.02 / report/reward_pos_acc 1 / report/reward_pos_loss
+0.68 / report/reward_pred 0.01 / report/reward_rate 0.02 /
+report/transition_tokens_loss_mean 9.6e-5 / report/transition_tokens_loss_std
+3.9e-6 / eval/cont_avg 1 / eval/cont_loss_mean 1.8e-5 / eval/cont_loss_std
+5.5e-4 / eval/cont_neg_acc 1 / eval/cont_neg_loss 0.02 / eval/cont_pos_acc 1 /
+eval/cont_pos_loss 3.1e-7 / eval/cont_pred 1 / eval/cont_rate 1 /
+eval/dyn_loss_mean 20.05 / eval/dyn_loss_std 13.5 / eval/image_loss_mean 34.86 /
+eval/image_loss_std 52.99 / eval/model_loss_mean 46.93 / eval/model_loss_std
+57.67 / eval/post_ent_mag 37.9 / eval/post_ent_max 37.9 / eval/post_ent_mean
+25.34 / eval/post_ent_min 10.25 / eval/post_ent_std 5.62 / eval/prior_ent_mag
+66.83 / eval/prior_ent_max 66.83 / eval/prior_ent_mean 32.88 /
+eval/prior_ent_min 11.46 / eval/prior_ent_std 9.76 / eval/rep_loss_mean 20.05 /
+eval/rep_loss_std 13.5 / eval/reward_avg 8.7e-3 / eval/reward_loss_mean 0.05 /
+eval/reward_loss_std 0.54 / eval/reward_max_data 1 / eval/reward_max_pred 1 /
+eval/reward_neg_acc 1 / eval/reward_neg_loss 0.01 / eval/reward_pos_acc 0.5 /
+eval/reward_pos_loss 3.83 / eval/reward_pred 3.8e-3 / eval/reward_rate 9.8e-3 /
+eval/transition_tokens_loss_mean 9.5e-5 / eval/transition_tokens_loss_std 3.7e-6
+/ replay/size 7.8e4 / replay/inserts 0 / replay/samples 112 /
+replay/insert_wait_avg nan / replay/insert_wait_frac nan /
+replay/sample_wait_avg 1.6e-6 / replay/sample_wait_frac 1 / eval_replay/size
+2923 / eval_replay/inserts 93 / eval_replay/samples 112 /
+eval_replay/insert_wait_avg 4.1e-6 / eval_replay/insert_wait_frac 1 /
+eval_replay/sample_wait_avg 1.6e-6 / eval_replay/sample_wait_frac 1 /
+timer/duration 164.42 / timer/replay._sample_count 112 /
+timer/replay._sample_total 10.82 / timer/replay._sample_frac 0.07 /
+timer/replay._sample_avg 0.1 / timer/replay._sample_min 0.04 /
+timer/replay._sample_max 0.13 / timer/agent.policy_count 157 /
+timer/agent.policy_total 8.71 / timer/agent.policy_frac 0.05 /
+timer/agent.policy_avg 0.06 / timer/agent.policy_min 8.7e-3 /
+timer/agent.policy_max 5.14 / timer/env.step_count 1 / timer/env.step_total 1.32
+/ timer/env.step_frac 8e-3 / timer/env.step_avg 1.32 / timer/env.step_min 1.32 /
+timer/env.step_max 1.32 / timer/dataset_train_count 1 /
+timer/dataset_train_total 6.1e-5 / timer/dataset_train_frac 3.7e-7 /
+timer/dataset_train_avg 6.1e-5 / timer/dataset_train_min 6.1e-5 /
+timer/dataset_train_max 6.1e-5 / timer/agent.train_count 1 /
+timer/agent.train_total 102.02 / timer/agent.train_frac 0.62 /
+timer/agent.train_avg 102.02 / timer/agent.train_min 102.02 /
+timer/agent.train_max 102.02 / timer/agent.report_count 2 /
+timer/agent.report_total 22.25 / timer/agent.report_frac 0.14 /
+timer/agent.report_avg 11.12 / timer/agent.report_min 6.1 /
+timer/agent.report_max 16.15 / timer/dataset_eval_count 1 /
+timer/dataset_eval_total 1.7e-4 / timer/dataset_eval_frac 1e-6 /
+timer/dataset_eval_avg 1.7e-4 / timer/dataset_eval_min 1.7e-4 /
+timer/dataset_eval_max 1.7e-4
+Creating new TensorBoard event file writer.

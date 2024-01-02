@@ -221,6 +221,7 @@ def azure_api_call(prompts: list):
         if 'error' in response:
             message = response['error']['message']
             sleep_time = int(re.findall(r'Please retry after (\w+) second', message)[0])
+            #sleep_time = 5
             sleep_time = min(sleep_time, max_wait_gpt4_time)
             time.sleep(sleep_time + 1.0)
             # Continue the loop to retry

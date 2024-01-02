@@ -1,0 +1,215 @@
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {'transition_tokens': (384,)}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {'transition_tokens': (384,)}
+JAX devices (1): [cuda(id=0)]
+Policy devices: cuda:0
+Train devices:  cuda:0
+Tracing train function.
+no rnd data in data
+Optimizer model_opt has 197,057,283 variables.
+Optimizer actor_opt has 9,464,849 variables.
+Optimizer critic_opt has 9,708,799 variables.
+Logdir /home/ziyu/logdir/ziyu_crafter_cuda_3_seed_3
+Observation space:
+  image            Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255)
+  transition_tokens Space(dtype=uint32, shape=(384,), low=0, high=4294967295)
+  goal_tokens      Space(dtype=uint32, shape=(5, 384), low=0, high=4294967295)
+  goal_id          Space(dtype=uint32, shape=(5,), low=0, high=4294967295)
+  reward           Space(dtype=float32, shape=(), low=-inf, high=inf)
+  is_first         Space(dtype=bool, shape=(), low=False, high=True)
+  is_last          Space(dtype=bool, shape=(), low=False, high=True)
+  is_terminal      Space(dtype=bool, shape=(), low=False, high=True)
+  log_reward       Space(dtype=float32, shape=(1,), low=-inf, high=inf)
+  log_achievement_collect_coal Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_diamond Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_drink Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_iron Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_sapling Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_wood Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_skeleton Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_zombie Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_cow Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_furnace Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_table Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_wake_up Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+Action space:
+  action           Space(dtype=float32, shape=(17,), low=0, high=1)
+  reset            Space(dtype=bool, shape=(), low=False, high=True)
+Prefill train dataset.
+Prefill eval dataset.
+Found existing checkpoint.
+Loading checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_3_seed_3/checkpoint.ckpt
+Loaded checkpoint from 37924 seconds ago.
+Start training loop.
+Starting evaluation at step 19600
+Tracing policy function.
+Tracing policy function.
+Traceback (most recent call last):
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 229, in <module>
+    main()
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py", line 69, in main
+    embodied.run.train_eval(
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/train_eval.py", line 145, in train_eval
+    driver_eval(policy_eval, episodes=max(len(eval_env), args.eval_eps))
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/driver.py", line 42, in __call__
+    step, episode = self._step(policy, step, episode)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/driver.py", line 47, in _step
+    obs = self._env.step(acts)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/batch.py", line 34, in step
+    obs = [ob() for ob in obs]
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/batch.py", line 34, in <listcomp>
+    obs = [ob() for ob in obs]
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 230, in __call__
+    self._result = self._receive(self._callid)
+  File "/home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/worker.py", line 174, in _receive
+    message, callid, payload = self._pipe.recv()
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py:229 in   │
+│ <module>                                                                     │
+│                                                                              │
+│   226                                                                        │
+│   227                                                                        │
+│   228 if __name__ == '__main__':                                             │
+│ ❱ 229   main()                                                               │
+│   230                                                                        │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/train.py:69 in    │
+│ main                                                                         │
+│                                                                              │
+│    66 │     eval_env = make_envs(config)  # mode='eval'                      │
+│    67 │     cleanup += [env, eval_env]                                       │
+│    68 │     agent = agt.Agent(env.obs_space, env.act_space, step, config)    │
+│ ❱  69 │     embodied.run.train_eval(                                         │
+│    70 │   │     agent, env, eval_env, replay, eval_replay, logger, args)     │
+│    71 │                                                                      │
+│    72 │   elif args.script == 'train_holdout':                               │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/run/trai │
+│ n_eval.py:145 in train_eval                                                  │
+│                                                                              │
+│   142 │   if should_eval(step):                                              │
+│   143 │     print('Starting evaluation at step', int(step))                  │
+│   144 │     driver_eval.reset()                                              │
+│ ❱ 145 │     driver_eval(policy_eval, episodes=max(len(eval_env), args.eval_e │
+│   146 │   driver_train(policy_train, steps=100)                              │
+│   147 │   if should_save(step):                                              │
+│   148 │     checkpoint.save()                                                │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/dri │
+│ ver.py:42 in __call__                                                        │
+│                                                                              │
+│   39   def __call__(self, policy, steps=0, episodes=0):                      │
+│   40 │   step, episode = 0, 0                                                │
+│   41 │   while step < steps or episode < episodes:                           │
+│ ❱ 42 │     step, episode = self._step(policy, step, episode)                 │
+│   43                                                                         │
+│   44   def _step(self, policy, step, episode):                               │
+│   45 │   assert all(len(x) == len(self._env) for x in self._acts.values())   │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/dri │
+│ ver.py:47 in _step                                                           │
+│                                                                              │
+│   44   def _step(self, policy, step, episode):                               │
+│   45 │   assert all(len(x) == len(self._env) for x in self._acts.values())   │
+│   46 │   acts = {k: v for k, v in self._acts.items() if not k.startswith('lo │
+│ ❱ 47 │   obs = self._env.step(acts)                                          │
+│   48 │   obs = {k: convert(v) for k, v in obs.items()}                       │
+│   49 │   assert all(len(x) == len(self._env) for x in obs.values()), obs     │
+│   50 │   acts, self._state = policy(obs, self._state, **self._kwargs)        │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/bat │
+│ ch.py:34 in step                                                             │
+│                                                                              │
+│   31 │     act = {k: v[i] for k, v in action.items()}                        │
+│   32 │     obs.append(env.step(act))                                         │
+│   33 │   if self._parallel:                                                  │
+│ ❱ 34 │     obs = [ob() for ob in obs]                                        │
+│   35 │   return {k: np.array([ob[k] for ob in obs]) for k in obs[0]}         │
+│   36                                                                         │
+│   37   def render(self):                                                     │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/bat │
+│ ch.py:34 in <listcomp>                                                       │
+│                                                                              │
+│   31 │     act = {k: v[i] for k, v in action.items()}                        │
+│   32 │     obs.append(env.step(act))                                         │
+│   33 │   if self._parallel:                                                  │
+│ ❱ 34 │     obs = [ob() for ob in obs]                                        │
+│   35 │   return {k: np.array([ob[k] for ob in obs]) for k in obs[0]}         │
+│   36                                                                         │
+│   37   def render(self):                                                     │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/wor │
+│ ker.py:230 in __call__                                                       │
+│                                                                              │
+│   227                                                                        │
+│   228   def __call__(self):                                                  │
+│   229 │   if not self._complete:                                             │
+│ ❱ 230 │     self._result = self._receive(self._callid)                       │
+│   231 │     self._complete = True                                            │
+│   232 │   return self._result                                                │
+│   233                                                                        │
+│                                                                              │
+│ /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/LID-rnd/embodied/core/wor │
+│ ker.py:174 in _receive                                                       │
+│                                                                              │
+│   171   def _receive(self, callid):                                          │
+│   172 │   while callid not in self._results:                                 │
+│   173 │     try:                                                             │
+│ ❱ 174 │   │   message, callid, payload = self._pipe.recv()                   │
+│   175 │     except (OSError, EOFError):                                      │
+│   176 │   │   raise RuntimeError('Lost connection to worker.')               │
+│   177 │     if message == Message.ERROR:                                     │
+│                                                                              │
+│ /home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/connection. │
+│ py:250 in recv                                                               │
+│                                                                              │
+│   247 │   │   """Receive a (picklable) object"""                             │
+│   248 │   │   self._check_closed()                                           │
+│   249 │   │   self._check_readable()                                         │
+│ ❱ 250 │   │   buf = self._recv_bytes()                                       │
+│   251 │   │   return _ForkingPickler.loads(buf.getbuffer())                  │
+│   252 │                                                                      │
+│   253 │   def poll(self, timeout=0.0):                                       │
+│                                                                              │
+│ /home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/connection. │
+│ py:414 in _recv_bytes                                                        │
+│                                                                              │
+│   411 │   │   │   │   self._send(header + buf)                               │
+│   412 │                                                                      │
+│   413 │   def _recv_bytes(self, maxsize=None):                               │
+│ ❱ 414 │   │   buf = self._recv(4)                                            │
+│   415 │   │   size, = struct.unpack("!i", buf.getvalue())                    │
+│   416 │   │   if size == -1:                                                 │
+│   417 │   │   │   buf = self._recv(8)                                        │
+│                                                                              │
+│ /home/ziyu/anaconda3/envs/jaxpy39/lib/python3.10/multiprocessing/connection. │
+│ py:379 in _recv                                                              │
+│                                                                              │
+│   376 │   │   handle = self._handle                                          │
+│   377 │   │   remaining = size                                               │
+│   378 │   │   while remaining > 0:                                           │
+│ ❱ 379 │   │   │   chunk = read(handle, remaining)                            │
+│   380 │   │   │   n = len(chunk)                                             │
+│   381 │   │   │   if n == 0:                                                 │
+│   382 │   │   │   │   if remaining == size:                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+KeyboardInterrupt

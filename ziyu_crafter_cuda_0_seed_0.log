@@ -1,0 +1,667 @@
+parsed:  
+Config:
+configs:  [crafter]  (strs) 
+remaining: ['--run.script', 'train_eval', '--use_wandb', 'True', '--logdir', '/home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0']
+parsed:  
+Config:
+use_wandb:                  True                                          (bool)
+seed:                       1                                             (int)
+method:                     name                                          (str)
+task:                       crafter_reward                                (str)
+logdir:                     /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0  (str)
+replay:                     uniform                                       (str)
+replay_size:                1000000.0                                     (float)
+replay_online:              False                                         (bool)
+eval_dir:                                                                 (str)
+filter:                     .*                                            (str)
+jax.platform:               gpu                                           (str)
+jax.jit:                    True                                          (bool)
+jax.precision:              float16                                       (str)
+jax.prealloc:               True                                          (bool)
+jax.debug_nans:             False                                         (bool)
+jax.logical_cpus:           0                                             (int)
+jax.debug:                  False                                         (bool)
+jax.policy_devices:         [0]                                           (ints)
+jax.train_devices:          [0]                                           (ints)
+jax.metrics_every:          10                                            (int)
+run.script:                 train_eval                                    (str)
+run.steps:                  10000000000.0                                 (float)
+run.expl_until:             0                                             (int)
+run.log_every:              300                                           (int)
+run.save_every:             900                                           (int)
+run.eval_every:             1000000.0                                     (float)
+run.eval_initial:           True                                          (bool)
+run.eval_eps:               1                                             (int)
+run.eval_samples:           1                                             (int)
+run.train_ratio:            512.0                                         (float)
+run.train_fill:             0                                             (int)
+run.eval_fill:              0                                             (int)
+run.log_zeros:              False                                         (bool)
+run.log_keys_video:         [image]                                       (strs)
+run.log_keys_sum:           ^log_reward$                                  (str)
+run.log_keys_mean:          (log_entropy)                                 (str)
+run.log_keys_max:           ^log_achievement_.*                           (str)
+run.from_checkpoint:                                                      (str)
+run.sync_every:             10                                            (int)
+run.actor_addr:             ipc:///tmp/5551                               (str)
+run.actor_batch:            32                                            (int)
+envs.amount:                1                                             (int)
+envs.parallel:              process                                       (str)
+envs.length:                0                                             (int)
+envs.reset:                 True                                          (bool)
+envs.restart:               True                                          (bool)
+envs.discretize:            0                                             (int)
+envs.checks:                False                                         (bool)
+wrapper.length:             0                                             (int)
+wrapper.reset:              True                                          (bool)
+wrapper.discretize:         0                                             (int)
+wrapper.checks:             False                                         (bool)
+env.atari.size:             [64, 64]                                      (ints)
+env.atari.repeat:           4                                             (int)
+env.atari.sticky:           True                                          (bool)
+env.atari.gray:             False                                         (bool)
+env.atari.actions:          all                                           (str)
+env.atari.lives:            unused                                        (str)
+env.atari.noops:            0                                             (int)
+env.atari.resize:           opencv                                        (str)
+env.dmlab.size:             [64, 64]                                      (ints)
+env.dmlab.repeat:           4                                             (int)
+env.dmlab.episodic:         True                                          (bool)
+env.minecraft.size:         [64, 64]                                      (ints)
+env.minecraft.break_speed:  100.0                                         (float)
+env.dmc.size:               [64, 64]                                      (ints)
+env.dmc.repeat:             2                                             (int)
+env.dmc.camera:             -1                                            (int)
+env.loconav.size:           [64, 64]                                      (ints)
+env.loconav.repeat:         2                                             (int)
+env.loconav.camera:         -1                                            (int)
+task_behavior:              Greedy                                        (str)
+expl_behavior:              None                                          (str)
+batch_size:                 16                                            (int)
+batch_length:               64                                            (int)
+data_loaders:               8                                             (int)
+grad_heads:                 [decoder, reward, cont]                       (strs)
+rssm.deter:                 4096                                          (int)
+rssm.units:                 1024                                          (int)
+rssm.stoch:                 32                                            (int)
+rssm.classes:               32                                            (int)
+rssm.act:                   silu                                          (str)
+rssm.norm:                  layer                                         (str)
+rssm.initial:               learned                                       (str)
+rssm.unimix:                0.01                                          (float)
+rssm.unroll:                False                                         (bool)
+rssm.action_clip:           1.0                                           (float)
+rssm.winit:                 normal                                        (str)
+rssm.fan:                   avg                                           (str)
+encoder.mlp_keys:           transition_tokens                             (str)
+encoder.cnn_keys:           image                                         (str)
+encoder.act:                silu                                          (str)
+encoder.norm:               layer                                         (str)
+encoder.mlp_layers:         5                                             (int)
+encoder.mlp_units:          1024                                          (int)
+encoder.cnn:                resnet                                        (str)
+encoder.cnn_depth:          96                                            (int)
+encoder.cnn_blocks:         0                                             (int)
+encoder.resize:             stride                                        (str)
+encoder.winit:              normal                                        (str)
+encoder.fan:                avg                                           (str)
+encoder.symlog_inputs:      True                                          (bool)
+encoder.minres:             4                                             (int)
+decoder.mlp_keys:           transition_tokens                             (str)
+decoder.cnn_keys:           image                                         (str)
+decoder.act:                silu                                          (str)
+decoder.norm:               layer                                         (str)
+decoder.mlp_layers:         5                                             (int)
+decoder.mlp_units:          1024                                          (int)
+decoder.cnn:                resnet                                        (str)
+decoder.cnn_depth:          96                                            (int)
+decoder.cnn_blocks:         0                                             (int)
+decoder.image_dist:         mse                                           (str)
+decoder.vector_dist:        symlog_mse                                    (str)
+decoder.inputs:             [deter, stoch]                                (strs)
+decoder.resize:             stride                                        (str)
+decoder.winit:              normal                                        (str)
+decoder.fan:                avg                                           (str)
+decoder.outscale:           1.0                                           (float)
+decoder.minres:             4                                             (int)
+decoder.cnn_sigmoid:        False                                         (bool)
+reward_head.layers:         5                                             (int)
+reward_head.units:          1024                                          (int)
+reward_head.act:            silu                                          (str)
+reward_head.norm:           layer                                         (str)
+reward_head.dist:           symlog_disc                                   (str)
+reward_head.outscale:       0.0                                           (float)
+reward_head.outnorm:        False                                         (bool)
+reward_head.inputs:         [deter, stoch]                                (strs)
+reward_head.winit:          normal                                        (str)
+reward_head.fan:            avg                                           (str)
+reward_head.bins:           255                                           (int)
+cont_head.layers:           5                                             (int)
+cont_head.units:            1024                                          (int)
+cont_head.act:              silu                                          (str)
+cont_head.norm:             layer                                         (str)
+cont_head.dist:             binary                                        (str)
+cont_head.outscale:         1.0                                           (float)
+cont_head.outnorm:          False                                         (bool)
+cont_head.inputs:           [deter, stoch]                                (strs)
+cont_head.winit:            normal                                        (str)
+cont_head.fan:              avg                                           (str)
+loss_scales.image:          1.0                                           (float)
+loss_scales.vector:         1.0                                           (float)
+loss_scales.reward:         1.0                                           (float)
+loss_scales.cont:           1.0                                           (float)
+loss_scales.dyn:            0.5                                           (float)
+loss_scales.rep:            0.1                                           (float)
+loss_scales.actor:          1.0                                           (float)
+loss_scales.critic:         1.0                                           (float)
+loss_scales.slowreg:        1.0                                           (float)
+dyn_loss.impl:              kl                                            (str)
+dyn_loss.free:              1.0                                           (float)
+rep_loss.impl:              kl                                            (str)
+rep_loss.free:              1.0                                           (float)
+model_opt.opt:              adam                                          (str)
+model_opt.lr:               0.0001                                        (float)
+model_opt.eps:              1e-08                                         (float)
+model_opt.clip:             1000.0                                        (float)
+model_opt.wd:               0.0                                           (float)
+model_opt.warmup:           0                                             (int)
+model_opt.lateclip:         0.0                                           (float)
+actor.layers:               5                                             (int)
+actor.units:                1024                                          (int)
+actor.act:                  silu                                          (str)
+actor.norm:                 layer                                         (str)
+actor.minstd:               0.1                                           (float)
+actor.maxstd:               1.0                                           (float)
+actor.outscale:             1.0                                           (float)
+actor.outnorm:              False                                         (bool)
+actor.unimix:               0.01                                          (float)
+actor.inputs:               [deter, stoch]                                (strs)
+actor.winit:                normal                                        (str)
+actor.fan:                  avg                                           (str)
+actor.symlog_inputs:        False                                         (bool)
+critic.layers:              5                                             (int)
+critic.units:               1024                                          (int)
+critic.act:                 silu                                          (str)
+critic.norm:                layer                                         (str)
+critic.dist:                symlog_disc                                   (str)
+critic.outscale:            0.0                                           (float)
+critic.outnorm:             False                                         (bool)
+critic.inputs:              [deter, stoch]                                (strs)
+critic.winit:               normal                                        (str)
+critic.fan:                 avg                                           (str)
+critic.bins:                255                                           (int)
+critic.symlog_inputs:       False                                         (bool)
+actor_opt.opt:              adam                                          (str)
+actor_opt.lr:               3e-05                                         (float)
+actor_opt.eps:              1e-05                                         (float)
+actor_opt.clip:             100.0                                         (float)
+actor_opt.wd:               0.0                                           (float)
+actor_opt.warmup:           0                                             (int)
+actor_opt.lateclip:         0.0                                           (float)
+critic_opt.opt:             adam                                          (str)
+critic_opt.lr:              3e-05                                         (float)
+critic_opt.eps:             1e-05                                         (float)
+critic_opt.clip:            100.0                                         (float)
+critic_opt.wd:              0.0                                           (float)
+critic_opt.warmup:          0                                             (int)
+critic_opt.lateclip:        0.0                                           (float)
+actor_dist_disc:            onehot                                        (str)
+actor_dist_cont:            normal                                        (str)
+actor_grad_disc:            reinforce                                     (str)
+actor_grad_cont:            backprop                                      (str)
+critic_type:                vfunction                                     (str)
+imag_horizon:               15                                            (int)
+imag_unroll:                False                                         (bool)
+horizon:                    333                                           (int)
+return_lambda:              0.95                                          (float)
+critic_slowreg:             logprob                                       (str)
+slow_critic_update:         1                                             (int)
+slow_critic_fraction:       0.02                                          (float)
+retnorm.impl:               perc_ema                                      (str)
+retnorm.decay:              0.99                                          (float)
+retnorm.max:                1.0                                           (float)
+retnorm.perclo:             5.0                                           (float)
+retnorm.perchi:             95.0                                          (float)
+actent:                     0.0003                                        (float)
+expl_rewards.extr:          1.0                                           (float)
+expl_rewards.disag:         0.1                                           (float)
+expl_opt.opt:               adam                                          (str)
+expl_opt.lr:                0.0001                                        (float)
+expl_opt.eps:               1e-05                                         (float)
+expl_opt.clip:              100.0                                         (float)
+expl_opt.wd:                0.0                                           (float)
+expl_opt.warmup:            0                                             (int)
+disag_head.layers:          5                                             (int)
+disag_head.units:           1024                                          (int)
+disag_head.act:             silu                                          (str)
+disag_head.norm:            layer                                         (str)
+disag_head.dist:            mse                                           (str)
+disag_head.outscale:        1.0                                           (float)
+disag_head.inputs:          [deter, stoch, action]                        (strs)
+disag_head.winit:           normal                                        (str)
+disag_head.fan:             avg                                           (str)
+disag_target:               [stoch]                                       (strs)
+disag_models:               8                                             (int) 
+remaining: []
+
+Config:
+use_wandb:                  True                                          (bool)
+seed:                       1                                             (int)
+method:                     name                                          (str)
+task:                       crafter_reward                                (str)
+logdir:                     /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0  (str)
+replay:                     uniform                                       (str)
+replay_size:                1000000.0                                     (float)
+replay_online:              False                                         (bool)
+eval_dir:                                                                 (str)
+filter:                     .*                                            (str)
+jax.platform:               gpu                                           (str)
+jax.jit:                    True                                          (bool)
+jax.precision:              float16                                       (str)
+jax.prealloc:               True                                          (bool)
+jax.debug_nans:             False                                         (bool)
+jax.logical_cpus:           0                                             (int)
+jax.debug:                  False                                         (bool)
+jax.policy_devices:         [0]                                           (ints)
+jax.train_devices:          [0]                                           (ints)
+jax.metrics_every:          10                                            (int)
+run.script:                 train_eval                                    (str)
+run.steps:                  10000000000.0                                 (float)
+run.expl_until:             0                                             (int)
+run.log_every:              300                                           (int)
+run.save_every:             900                                           (int)
+run.eval_every:             1000000.0                                     (float)
+run.eval_initial:           True                                          (bool)
+run.eval_eps:               1                                             (int)
+run.eval_samples:           1                                             (int)
+run.train_ratio:            512.0                                         (float)
+run.train_fill:             0                                             (int)
+run.eval_fill:              0                                             (int)
+run.log_zeros:              False                                         (bool)
+run.log_keys_video:         [image]                                       (strs)
+run.log_keys_sum:           ^log_reward$                                  (str)
+run.log_keys_mean:          (log_entropy)                                 (str)
+run.log_keys_max:           ^log_achievement_.*                           (str)
+run.from_checkpoint:                                                      (str)
+run.sync_every:             10                                            (int)
+run.actor_addr:             ipc:///tmp/5551                               (str)
+run.actor_batch:            32                                            (int)
+envs.amount:                1                                             (int)
+envs.parallel:              process                                       (str)
+envs.length:                0                                             (int)
+envs.reset:                 True                                          (bool)
+envs.restart:               True                                          (bool)
+envs.discretize:            0                                             (int)
+envs.checks:                False                                         (bool)
+wrapper.length:             0                                             (int)
+wrapper.reset:              True                                          (bool)
+wrapper.discretize:         0                                             (int)
+wrapper.checks:             False                                         (bool)
+env.atari.size:             [64, 64]                                      (ints)
+env.atari.repeat:           4                                             (int)
+env.atari.sticky:           True                                          (bool)
+env.atari.gray:             False                                         (bool)
+env.atari.actions:          all                                           (str)
+env.atari.lives:            unused                                        (str)
+env.atari.noops:            0                                             (int)
+env.atari.resize:           opencv                                        (str)
+env.dmlab.size:             [64, 64]                                      (ints)
+env.dmlab.repeat:           4                                             (int)
+env.dmlab.episodic:         True                                          (bool)
+env.minecraft.size:         [64, 64]                                      (ints)
+env.minecraft.break_speed:  100.0                                         (float)
+env.dmc.size:               [64, 64]                                      (ints)
+env.dmc.repeat:             2                                             (int)
+env.dmc.camera:             -1                                            (int)
+env.loconav.size:           [64, 64]                                      (ints)
+env.loconav.repeat:         2                                             (int)
+env.loconav.camera:         -1                                            (int)
+task_behavior:              Greedy                                        (str)
+expl_behavior:              None                                          (str)
+batch_size:                 16                                            (int)
+batch_length:               64                                            (int)
+data_loaders:               8                                             (int)
+grad_heads:                 [decoder, reward, cont]                       (strs)
+rssm.deter:                 4096                                          (int)
+rssm.units:                 1024                                          (int)
+rssm.stoch:                 32                                            (int)
+rssm.classes:               32                                            (int)
+rssm.act:                   silu                                          (str)
+rssm.norm:                  layer                                         (str)
+rssm.initial:               learned                                       (str)
+rssm.unimix:                0.01                                          (float)
+rssm.unroll:                False                                         (bool)
+rssm.action_clip:           1.0                                           (float)
+rssm.winit:                 normal                                        (str)
+rssm.fan:                   avg                                           (str)
+encoder.mlp_keys:           transition_tokens                             (str)
+encoder.cnn_keys:           image                                         (str)
+encoder.act:                silu                                          (str)
+encoder.norm:               layer                                         (str)
+encoder.mlp_layers:         5                                             (int)
+encoder.mlp_units:          1024                                          (int)
+encoder.cnn:                resnet                                        (str)
+encoder.cnn_depth:          96                                            (int)
+encoder.cnn_blocks:         0                                             (int)
+encoder.resize:             stride                                        (str)
+encoder.winit:              normal                                        (str)
+encoder.fan:                avg                                           (str)
+encoder.symlog_inputs:      True                                          (bool)
+encoder.minres:             4                                             (int)
+decoder.mlp_keys:           transition_tokens                             (str)
+decoder.cnn_keys:           image                                         (str)
+decoder.act:                silu                                          (str)
+decoder.norm:               layer                                         (str)
+decoder.mlp_layers:         5                                             (int)
+decoder.mlp_units:          1024                                          (int)
+decoder.cnn:                resnet                                        (str)
+decoder.cnn_depth:          96                                            (int)
+decoder.cnn_blocks:         0                                             (int)
+decoder.image_dist:         mse                                           (str)
+decoder.vector_dist:        symlog_mse                                    (str)
+decoder.inputs:             [deter, stoch]                                (strs)
+decoder.resize:             stride                                        (str)
+decoder.winit:              normal                                        (str)
+decoder.fan:                avg                                           (str)
+decoder.outscale:           1.0                                           (float)
+decoder.minres:             4                                             (int)
+decoder.cnn_sigmoid:        False                                         (bool)
+reward_head.layers:         5                                             (int)
+reward_head.units:          1024                                          (int)
+reward_head.act:            silu                                          (str)
+reward_head.norm:           layer                                         (str)
+reward_head.dist:           symlog_disc                                   (str)
+reward_head.outscale:       0.0                                           (float)
+reward_head.outnorm:        False                                         (bool)
+reward_head.inputs:         [deter, stoch]                                (strs)
+reward_head.winit:          normal                                        (str)
+reward_head.fan:            avg                                           (str)
+reward_head.bins:           255                                           (int)
+cont_head.layers:           5                                             (int)
+cont_head.units:            1024                                          (int)
+cont_head.act:              silu                                          (str)
+cont_head.norm:             layer                                         (str)
+cont_head.dist:             binary                                        (str)
+cont_head.outscale:         1.0                                           (float)
+cont_head.outnorm:          False                                         (bool)
+cont_head.inputs:           [deter, stoch]                                (strs)
+cont_head.winit:            normal                                        (str)
+cont_head.fan:              avg                                           (str)
+loss_scales.image:          1.0                                           (float)
+loss_scales.vector:         1.0                                           (float)
+loss_scales.reward:         1.0                                           (float)
+loss_scales.cont:           1.0                                           (float)
+loss_scales.dyn:            0.5                                           (float)
+loss_scales.rep:            0.1                                           (float)
+loss_scales.actor:          1.0                                           (float)
+loss_scales.critic:         1.0                                           (float)
+loss_scales.slowreg:        1.0                                           (float)
+dyn_loss.impl:              kl                                            (str)
+dyn_loss.free:              1.0                                           (float)
+rep_loss.impl:              kl                                            (str)
+rep_loss.free:              1.0                                           (float)
+model_opt.opt:              adam                                          (str)
+model_opt.lr:               0.0001                                        (float)
+model_opt.eps:              1e-08                                         (float)
+model_opt.clip:             1000.0                                        (float)
+model_opt.wd:               0.0                                           (float)
+model_opt.warmup:           0                                             (int)
+model_opt.lateclip:         0.0                                           (float)
+actor.layers:               5                                             (int)
+actor.units:                1024                                          (int)
+actor.act:                  silu                                          (str)
+actor.norm:                 layer                                         (str)
+actor.minstd:               0.1                                           (float)
+actor.maxstd:               1.0                                           (float)
+actor.outscale:             1.0                                           (float)
+actor.outnorm:              False                                         (bool)
+actor.unimix:               0.01                                          (float)
+actor.inputs:               [deter, stoch]                                (strs)
+actor.winit:                normal                                        (str)
+actor.fan:                  avg                                           (str)
+actor.symlog_inputs:        False                                         (bool)
+critic.layers:              5                                             (int)
+critic.units:               1024                                          (int)
+critic.act:                 silu                                          (str)
+critic.norm:                layer                                         (str)
+critic.dist:                symlog_disc                                   (str)
+critic.outscale:            0.0                                           (float)
+critic.outnorm:             False                                         (bool)
+critic.inputs:              [deter, stoch]                                (strs)
+critic.winit:               normal                                        (str)
+critic.fan:                 avg                                           (str)
+critic.bins:                255                                           (int)
+critic.symlog_inputs:       False                                         (bool)
+actor_opt.opt:              adam                                          (str)
+actor_opt.lr:               3e-05                                         (float)
+actor_opt.eps:              1e-05                                         (float)
+actor_opt.clip:             100.0                                         (float)
+actor_opt.wd:               0.0                                           (float)
+actor_opt.warmup:           0                                             (int)
+actor_opt.lateclip:         0.0                                           (float)
+critic_opt.opt:             adam                                          (str)
+critic_opt.lr:              3e-05                                         (float)
+critic_opt.eps:             1e-05                                         (float)
+critic_opt.clip:            100.0                                         (float)
+critic_opt.wd:              0.0                                           (float)
+critic_opt.warmup:          0                                             (int)
+critic_opt.lateclip:        0.0                                           (float)
+actor_dist_disc:            onehot                                        (str)
+actor_dist_cont:            normal                                        (str)
+actor_grad_disc:            reinforce                                     (str)
+actor_grad_cont:            backprop                                      (str)
+critic_type:                vfunction                                     (str)
+imag_horizon:               15                                            (int)
+imag_unroll:                False                                         (bool)
+horizon:                    333                                           (int)
+return_lambda:              0.95                                          (float)
+critic_slowreg:             logprob                                       (str)
+slow_critic_update:         1                                             (int)
+slow_critic_fraction:       0.02                                          (float)
+retnorm.impl:               perc_ema                                      (str)
+retnorm.decay:              0.99                                          (float)
+retnorm.max:                1.0                                           (float)
+retnorm.perclo:             5.0                                           (float)
+retnorm.perchi:             95.0                                          (float)
+actent:                     0.0003                                        (float)
+expl_rewards.extr:          1.0                                           (float)
+expl_rewards.disag:         0.1                                           (float)
+expl_opt.opt:               adam                                          (str)
+expl_opt.lr:                0.0001                                        (float)
+expl_opt.eps:               1e-05                                         (float)
+expl_opt.clip:              100.0                                         (float)
+expl_opt.wd:                0.0                                           (float)
+expl_opt.warmup:            0                                             (int)
+disag_head.layers:          5                                             (int)
+disag_head.units:           1024                                          (int)
+disag_head.act:             silu                                          (str)
+disag_head.norm:            layer                                         (str)
+disag_head.dist:            mse                                           (str)
+disag_head.outscale:        1.0                                           (float)
+disag_head.inputs:          [deter, stoch, action]                        (strs)
+disag_head.winit:           normal                                        (str)
+disag_head.fan:             avg                                           (str)
+disag_target:               [stoch]                                       (strs)
+disag_models:               8                                             (int)wandb: Currently logged in as: ibisbill326 (ibisbill326-gmail-com). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.16.1 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.0
+wandb: Run data is saved locally in /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175204-gxddgecb
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run ziyu_crafter_cuda_0_seed_0
+wandb: ⭐️ View project at https://wandb.ai/ibisbill326-gmail-com/crafter_reward
+wandb: 🚀 View run at https://wandb.ai/ibisbill326-gmail-com/crafter_reward/runs/gxddgecb
+
+!! Resuming wandb run !!
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {'transition_tokens': (384,)}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {'transition_tokens': (384,)}
+JAX devices (1): [cuda(id=0)]
+Policy devices: cuda:0
+Train devices:  cuda:0
+Tracing train function.
+no rnd data in data
+Optimizer model_opt has 197,057,283 variables.
+Optimizer actor_opt has 9,464,849 variables.
+Optimizer critic_opt has 9,708,799 variables.
+Logdir /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0
+Observation space:
+  image            Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255)
+  transition_tokens Space(dtype=uint32, shape=(384,), low=0, high=4294967295)
+  goal_tokens      Space(dtype=uint32, shape=(5, 384), low=0, high=4294967295)
+  goal_id          Space(dtype=uint32, shape=(5,), low=0, high=4294967295)
+  reward           Space(dtype=float32, shape=(), low=-inf, high=inf)
+  is_first         Space(dtype=bool, shape=(), low=False, high=True)
+  is_last          Space(dtype=bool, shape=(), low=False, high=True)
+  is_terminal      Space(dtype=bool, shape=(), low=False, high=True)
+  log_reward       Space(dtype=float32, shape=(1,), low=-inf, high=inf)
+  log_achievement_collect_coal Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_diamond Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_drink Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_iron Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_sapling Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_collect_wood Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_skeleton Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_defeat_zombie Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_cow Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_eat_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_iron_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_stone_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_pickaxe Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_make_wood_sword Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_furnace Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_plant Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_stone Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_place_table Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+  log_achievement_wake_up Space(dtype=int32, shape=(), low=-2147483648, high=2147483647)
+Action space:
+  action           Space(dtype=float32, shape=(17,), low=0, high=1)
+  reset            Space(dtype=bool, shape=(), low=False, high=True)
+Prefill train dataset.
+Prefill eval dataset.
+Found existing checkpoint.
+Loading checkpoint: /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0/checkpoint.ckpt
+Loaded checkpoint from 36383 seconds ago.
+Start training loop.
+Starting evaluation at step 30600
+Tracing policy function.
+Tracing policy function.
+Episode has 155 steps and return 2.1.
+Tracing policy function.
+Tracing train function.
+Tracing report function.
+Tracing report function.
+Tracing report function.
+────────────────────────────────── Step 30601 ──────────────────────────────────
+eval_episode/length 155 / eval_episode/score 2.1 / eval_episode/reward_rate 0.97
+/ eval_stats/sum_log_reward 2.1 / eval_stats/max_log_achievement_collect_drink 1
+/ eval_stats/max_log_achievement_collect_sapling 1 / 
+eval_stats/max_log_achievement_wake_up 2 / train/action_mag 16 / 
+train/action_max 16 / train/action_mean 4.51 / train/action_min 0 / 
+train/action_std 3.46 / train/actor_opt_actor_opt_grad_overflow 0 / 
+train/actor_opt_actor_opt_grad_scale 1e4 / train/actor_opt_grad_norm 0.05 / 
+train/actor_opt_grad_steps 1.5e4 / train/actor_opt_loss 34.96 / train/adv_mag 
+0.77 / train/adv_max 0.77 / train/adv_mean 6.9e-3 / train/adv_min -0.61 / 
+train/adv_std 0.07 / train/cont_avg 1 / train/cont_loss_mean 1.8e-6 / 
+train/cont_loss_std 2e-5 / train/cont_neg_acc 1 / train/cont_neg_loss 2.8e-4 / 
+train/cont_pos_acc 1 / train/cont_pos_loss 4.2e-7 / train/cont_pred 1 / 
+train/cont_rate 1 / train/dyn_loss_mean 4.57 / train/dyn_loss_std 7.98 / 
+train/extr_critic_critic_opt_critic_opt_grad_overflow 0 / 
+train/extr_critic_critic_opt_critic_opt_grad_scale 1e4 / 
+train/extr_critic_critic_opt_grad_norm 1.2 / 
+train/extr_critic_critic_opt_grad_steps 1.5e4 / 
+train/extr_critic_critic_opt_loss 1.6e4 / train/extr_critic_mag 8.38 / 
+train/extr_critic_max 8.38 / train/extr_critic_mean 2.02 / train/extr_critic_min
+-0.35 / train/extr_critic_std 1.4 / train/extr_return_normed_mag 1.63 / 
+train/extr_return_normed_max 1.63 / train/extr_return_normed_mean 0.39 / 
+train/extr_return_normed_min -0.22 / train/extr_return_normed_std 0.31 / 
+train/extr_return_rate 0.92 / train/extr_return_raw_mag 7.82 / 
+train/extr_return_raw_max 7.82 / train/extr_return_raw_mean 2.05 / 
+train/extr_return_raw_min -0.77 / train/extr_return_raw_std 1.45 / 
+train/extr_reward_mag 1 / train/extr_reward_max 1 / train/extr_reward_mean 0.02 
+/ train/extr_reward_min -0.7 / train/extr_reward_std 0.15 / 
+train/image_loss_mean 5.93 / train/image_loss_std 10.4 / train/model_loss_mean 
+8.71 / train/model_loss_std 14 / train/model_opt_grad_norm 75.43 / 
+train/model_opt_grad_steps 1.5e4 / train/model_opt_loss 1.1e4 / 
+train/model_opt_model_opt_grad_overflow 0 / train/model_opt_model_opt_grad_scale
+1250 / train/policy_entropy_mag 2.38 / train/policy_entropy_max 2.38 / 
+train/policy_entropy_mean 0.52 / train/policy_entropy_min 0.08 / 
+train/policy_entropy_std 0.54 / train/policy_logprob_mag 7.44 / 
+train/policy_logprob_max -9.5e-3 / train/policy_logprob_mean -0.52 / 
+train/policy_logprob_min -7.44 / train/policy_logprob_std 1.07 / 
+train/policy_randomness_mag 0.84 / train/policy_randomness_max 0.84 / 
+train/policy_randomness_mean 0.19 / train/policy_randomness_min 0.03 / 
+train/policy_randomness_std 0.19 / train/post_ent_mag 41.99 / train/post_ent_max
+41.99 / train/post_ent_mean 23.53 / train/post_ent_min 11.98 / 
+train/post_ent_std 5.08 / train/prior_ent_mag 66.82 / train/prior_ent_max 66.82 
+/ train/prior_ent_mean 27.53 / train/prior_ent_min 11.24 / train/prior_ent_std 
+9.04 / train/rep_loss_mean 4.57 / train/rep_loss_std 7.98 / train/reward_avg 
+0.01 / train/reward_loss_mean 0.04 / train/reward_loss_std 0.24 / 
+train/reward_max_data 1 / train/reward_max_pred 1 / train/reward_neg_acc 1 / 
+train/reward_neg_loss 0.03 / train/reward_pos_acc 1 / train/reward_pos_loss 0.72
+/ train/reward_pred 0.01 / train/reward_rate 0.02 / 
+train/transition_tokens_loss_mean 1.2e-4 / train/transition_tokens_loss_std 
+4.5e-6 / train/params_agent/wm/model_opt 2e8 / 
+train/params_agent/task_behavior/critic/critic_opt 9.7e6 / 
+train/params_agent/task_behavior/ac/actor_opt 9.5e6 / report/cont_avg 1 / 
+report/cont_loss_mean 1.8e-6 / report/cont_loss_std 2.1e-5 / report/cont_neg_acc
+1 / report/cont_neg_loss 2.9e-4 / report/cont_pos_acc 1 / report/cont_pos_loss 
+3.8e-7 / report/cont_pred 1 / report/cont_rate 1 / report/dyn_loss_mean 4.35 / 
+report/dyn_loss_std 7.81 / report/image_loss_mean 5.42 / report/image_loss_std 
+8.98 / report/model_loss_mean 8.07 / report/model_loss_std 12.63 / 
+report/post_ent_mag 41.57 / report/post_ent_max 41.57 / report/post_ent_mean 
+23.49 / report/post_ent_min 11.84 / report/post_ent_std 5.08 / 
+report/prior_ent_mag 66.83 / report/prior_ent_max 66.83 / report/prior_ent_mean 
+27.57 / report/prior_ent_min 11.61 / report/prior_ent_std 9.14 / 
+report/rep_loss_mean 4.35 / report/rep_loss_std 7.81 / report/reward_avg 0.01 / 
+report/reward_loss_mean 0.04 / report/reward_loss_std 0.22 / 
+report/reward_max_data 1 / report/reward_max_pred 1 / report/reward_neg_acc 1 / 
+report/reward_neg_loss 0.02 / report/reward_pos_acc 1 / report/reward_pos_loss 
+0.68 / report/reward_pred 0.01 / report/reward_rate 0.02 / 
+report/transition_tokens_loss_mean 9.6e-5 / report/transition_tokens_loss_std 
+3.9e-6 / eval/cont_avg 1 / eval/cont_loss_mean 1.8e-5 / eval/cont_loss_std 
+5.5e-4 / eval/cont_neg_acc 1 / eval/cont_neg_loss 0.02 / eval/cont_pos_acc 1 / 
+eval/cont_pos_loss 3.1e-7 / eval/cont_pred 1 / eval/cont_rate 1 / 
+eval/dyn_loss_mean 20.05 / eval/dyn_loss_std 13.5 / eval/image_loss_mean 34.86 /
+eval/image_loss_std 52.99 / eval/model_loss_mean 46.93 / eval/model_loss_std 
+57.67 / eval/post_ent_mag 37.9 / eval/post_ent_max 37.9 / eval/post_ent_mean 
+25.34 / eval/post_ent_min 10.25 / eval/post_ent_std 5.62 / eval/prior_ent_mag 
+66.83 / eval/prior_ent_max 66.83 / eval/prior_ent_mean 32.88 / 
+eval/prior_ent_min 11.46 / eval/prior_ent_std 9.76 / eval/rep_loss_mean 20.05 / 
+eval/rep_loss_std 13.5 / eval/reward_avg 8.7e-3 / eval/reward_loss_mean 0.05 / 
+eval/reward_loss_std 0.54 / eval/reward_max_data 1 / eval/reward_max_pred 1 / 
+eval/reward_neg_acc 1 / eval/reward_neg_loss 0.01 / eval/reward_pos_acc 0.5 / 
+eval/reward_pos_loss 3.83 / eval/reward_pred 3.8e-3 / eval/reward_rate 9.8e-3 / 
+eval/transition_tokens_loss_mean 9.5e-5 / eval/transition_tokens_loss_std 3.7e-6
+/ replay/size 7.8e4 / replay/inserts 0 / replay/samples 112 / 
+replay/insert_wait_avg nan / replay/insert_wait_frac nan / 
+replay/sample_wait_avg 1.6e-6 / replay/sample_wait_frac 1 / eval_replay/size 
+2923 / eval_replay/inserts 93 / eval_replay/samples 112 / 
+eval_replay/insert_wait_avg 4.1e-6 / eval_replay/insert_wait_frac 1 / 
+eval_replay/sample_wait_avg 1.6e-6 / eval_replay/sample_wait_frac 1 / 
+timer/duration 164.42 / timer/replay._sample_count 112 / 
+timer/replay._sample_total 10.82 / timer/replay._sample_frac 0.07 / 
+timer/replay._sample_avg 0.1 / timer/replay._sample_min 0.04 / 
+timer/replay._sample_max 0.13 / timer/agent.policy_count 157 / 
+timer/agent.policy_total 8.71 / timer/agent.policy_frac 0.05 / 
+timer/agent.policy_avg 0.06 / timer/agent.policy_min 8.7e-3 / 
+timer/agent.policy_max 5.14 / timer/env.step_count 1 / timer/env.step_total 1.32
+/ timer/env.step_frac 8e-3 / timer/env.step_avg 1.32 / timer/env.step_min 1.32 /
+timer/env.step_max 1.32 / timer/dataset_train_count 1 / 
+timer/dataset_train_total 6.1e-5 / timer/dataset_train_frac 3.7e-7 / 
+timer/dataset_train_avg 6.1e-5 / timer/dataset_train_min 6.1e-5 / 
+timer/dataset_train_max 6.1e-5 / timer/agent.train_count 1 / 
+timer/agent.train_total 102.02 / timer/agent.train_frac 0.62 / 
+timer/agent.train_avg 102.02 / timer/agent.train_min 102.02 / 
+timer/agent.train_max 102.02 / timer/agent.report_count 2 / 
+timer/agent.report_total 22.25 / timer/agent.report_frac 0.14 / 
+timer/agent.report_avg 11.12 / timer/agent.report_min 6.1 / 
+timer/agent.report_max 16.15 / timer/dataset_eval_count 1 / 
+timer/dataset_eval_total 1.7e-4 / timer/dataset_eval_frac 1e-6 / 
+timer/dataset_eval_avg 1.7e-4 / timer/dataset_eval_min 1.7e-4 / 
+timer/dataset_eval_max 1.7e-4
+wandb: WARNING Found log directory outside of given root_logdir, dropping given root_logdir for event file in /home/ziyu/logdir/ziyu_crafter_cuda_0_seed_0

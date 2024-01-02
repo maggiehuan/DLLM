@@ -1,0 +1,156 @@
+2024-01-02 17:51:56,969 INFO    StreamThr :17760 [internal.py:wandb_internal():86] W&B internal server running at pid: 17760, started at: 2024-01-02 17:51:56.968488
+2024-01-02 17:51:56,970 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status
+2024-01-02 17:51:56,977 INFO    WriterThread:17760 [datastore.py:open_for_write():85] open: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/run-qfnw79st.wandb
+2024-01-02 17:51:56,977 DEBUG   SenderThread:17760 [sender.py:send():380] send: header
+2024-01-02 17:51:56,983 DEBUG   SenderThread:17760 [sender.py:send():380] send: run
+2024-01-02 17:51:57,003 INFO    SenderThread:17760 [sender.py:_maybe_setup_resume():759] checking resume status for None/crafter_reward/qfnw79st
+2024-01-02 17:51:57,243 INFO    SenderThread:17760 [sender.py:_maybe_setup_resume():833] configured resuming with: ResumeState(resumed=True,step=0,history=0,events=1,output=57,runtime=60.556002,wandb_runtime=None,summary={},config={'env': {'desc': None, 'value': {'dmc': {'size': [64, 64], 'camera': -1, 'repeat': 2}, 'atari': {'gray': False, 'size': [64, 64], 'lives': 'unused', 'noops': 0, 'repeat': 4, 'resize': 'opencv', 'sticky': True, 'actions': 'all'}, 'dmlab': {'size': [64, 64], 'repeat': 4, 'episodic': True}, 'loconav': {'size': [64, 64], 'camera': -1, 'repeat': 2}, 'minecraft': {'size': [64, 64], 'break_speed': 100}}}, 'jax': {'desc': None, 'value': {'jit': True, 'debug': False, 'platform': 'gpu', 'prealloc': True, 'precision': 'float16', 'debug_nans': False, 'logical_cpus': 0, 'metrics_every': 10, 'train_devices': [0], 'policy_devices': [0]}}, 'run': {'desc': None, 'value': {'steps': 10000000000.0, 'script': 'train_eval', 'eval_eps': 1, 'eval_fill': 0, 'log_every': 300, 'log_zeros': False, 'actor_addr': 'ipc:///tmp/5551', 'eval_every': 1000000.0, 'expl_until': 0, 'save_every': 900, 'sync_every': 10, 'train_fill': 0, 'actor_batch': 32, 'train_ratio': 512, 'eval_initial': True, 'eval_samples': 1, 'log_keys_max': '^log_achievement_.*', 'log_keys_sum': '^log_reward$', 'log_keys_mean': '(log_entropy)', 'log_keys_video': ['image'], 'from_checkpoint': ''}}, 'envs': {'desc': None, 'value': {'reset': True, 'amount': 1, 'checks': False, 'length': 0, 'restart': True, 'parallel': 'process', 'discretize': 0}}, 'rssm': {'desc': None, 'value': {'act': 'silu', 'fan': 'avg', 'norm': 'layer', 'deter': 4096, 'stoch': 32, 'units': 1024, 'winit': 'normal', 'unimix': 0.01, 'unroll': False, 'classes': 32, 'initial': 'learned', 'action_clip': 1}}, 'seed': {'desc': None, 'value': 1}, 'task': {'desc': None, 'value': 'crafter_reward'}, 'actor': {'desc': None, 'value': {'act': 'silu', 'fan': 'avg', 'norm': 'layer', 'units': 1024, 'winit': 'normal', 'inputs': ['deter', 'stoch'], 'layers': 5, 'maxstd': 1, 'minstd': 0.1, 'unimix': 0.01, 'outnorm': False, 'outscale': 1, 'symlog_inputs': False}}, '_wandb': {'desc': None, 'value': {'t': {'1': [1, 2, 3, 12, 55, 105], '2': [1, 2, 3, 11, 12, 49, 55, 105], '3': [13, 14, 16, 23, 35], '4': '3.10.13', '5': '0.16.0', '8': [5], '13': 'linux-x86_64'}, 'framework': 'huggingface', 'start_time': 1704217806.73785, 'cli_version': '0.16.0', 'is_jupyter_run': False, 'python_version': '3.10.13', 'is_kaggle_kernel': False}}, 'actent': {'desc': None, 'value': 0.0003}, 'critic': {'desc': None, 'value': {'act': 'silu', 'fan': 'avg', 'bins': 255, 'dist': 'symlog_disc', 'norm': 'layer', 'units': 1024, 'winit': 'normal', 'inputs': ['deter', 'stoch'], 'layers': 5, 'outnorm': False, 'outscale': 0, 'symlog_inputs': False}}, 'filter': {'desc': None, 'value': '.*'}, 'logdir': {'desc': None, 'value': '/home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2'}, 'method': {'desc': None, 'value': 'name'}, 'replay': {'desc': None, 'value': 'uniform'}, 'decoder': {'desc': None, 'value': {'act': 'silu', 'cnn': 'resnet', 'fan': 'avg', 'norm': 'layer', 'winit': 'normal', 'inputs': ['deter', 'stoch'], 'minres': 4, 'resize': 'stride', 'cnn_keys': 'image', 'mlp_keys': 'transition_tokens', 'outscale': 1, 'cnn_depth': 96, 'mlp_units': 1024, 'cnn_blocks': 0, 'image_dist': 'mse', 'mlp_layers': 5, 'cnn_sigmoid': False, 'vector_dist': 'symlog_mse'}}, 'encoder': {'desc': None, 'value': {'act': 'silu', 'cnn': 'resnet', 'fan': 'avg', 'norm': 'layer', 'winit': 'normal', 'minres': 4, 'resize': 'stride', 'cnn_keys': 'image', 'mlp_keys': 'transition_tokens', 'cnn_depth': 96, 'mlp_units': 1024, 'cnn_blocks': 0, 'mlp_layers': 5, 'symlog_inputs': True}}, 'horizon': {'desc': None, 'value': 333}, 'retnorm': {'desc': None, 'value': {'max': 1, 'impl': 'perc_ema', 'decay': 0.99, 'perchi': 95, 'perclo': 5}}, 'wrapper': {'desc': None, 'value': {'reset': True, 'checks': False, 'length': 0, 'discretize': 0}}, 'dyn_loss': {'desc': None, 'value': {'free': 1, 'impl': 'kl'}}, 'eval_dir': {'desc': None, 'value': ''}, 'expl_opt': {'desc': None, 'value': {'lr': 0.0001, 'wd': 0, 'eps': 1e-05, 'opt': 'adam', 'clip': 100, 'warmup': 0}}, 'rep_loss': {'desc': None, 'value': {'free': 1, 'impl': 'kl'}}, 'actor_opt': {'desc': None, 'value': {'lr': 3e-05, 'wd': 0, 'eps': 1e-05, 'opt': 'adam', 'clip': 100, 'warmup': 0, 'lateclip': 0}}, 'cont_head': {'desc': None, 'value': {'act': 'silu', 'fan': 'avg', 'dist': 'binary', 'norm': 'layer', 'units': 1024, 'winit': 'normal', 'inputs': ['deter', 'stoch'], 'layers': 5, 'outnorm': False, 'outscale': 1}}, 'model_opt': {'desc': None, 'value': {'lr': 0.0001, 'wd': 0, 'eps': 1e-08, 'opt': 'adam', 'clip': 1000, 'warmup': 0, 'lateclip': 0}}, 'use_wandb': {'desc': None, 'value': True}, 'batch_size': {'desc': None, 'value': 16}, 'critic_opt': {'desc': None, 'value': {'lr': 3e-05, 'wd': 0, 'eps': 1e-05, 'opt': 'adam', 'clip': 100, 'warmup': 0, 'lateclip': 0}}, 'disag_head': {'desc': None, 'value': {'act': 'silu', 'fan': 'avg', 'dist': 'mse', 'norm': 'layer', 'units': 1024, 'winit': 'normal', 'inputs': ['deter', 'stoch', 'action'], 'layers': 5, 'outscale': 1}}, 'grad_heads': {'desc': None, 'value': ['decoder', 'reward', 'cont']}, 'critic_type': {'desc': None, 'value': 'vfunction'}, 'imag_unroll': {'desc': None, 'value': False}, 'loss_scales': {'desc': None, 'value': {'dyn': 0.5, 'rep': 0.1, 'cont': 1, 'actor': 1, 'image': 1, 'critic': 1, 'reward': 1, 'vector': 1, 'slowreg': 1}}, 'replay_size': {'desc': None, 'value': 1000000.0}, 'reward_head': {'desc': None, 'value': {'act': 'silu', 'fan': 'avg', 'bins': 255, 'dist': 'symlog_disc', 'norm': 'layer', 'units': 1024, 'winit': 'normal', 'inputs': ['deter', 'stoch'], 'layers': 5, 'outnorm': False, 'outscale': 0}}, 'batch_length': {'desc': None, 'value': 64}, 'data_loaders': {'desc': None, 'value': 8}, 'disag_models': {'desc': None, 'value': 8}, 'disag_target': {'desc': None, 'value': ['stoch']}, 'expl_rewards': {'desc': None, 'value': {'extr': 1, 'disag': 0.1}}, 'imag_horizon': {'desc': None, 'value': 15}, 'expl_behavior': {'desc': None, 'value': 'None'}, 'replay_online': {'desc': None, 'value': False}, 'return_lambda': {'desc': None, 'value': 0.95}, 'task_behavior': {'desc': None, 'value': 'Greedy'}, 'critic_slowreg': {'desc': None, 'value': 'logprob'}, 'actor_dist_cont': {'desc': None, 'value': 'normal'}, 'actor_dist_disc': {'desc': None, 'value': 'onehot'}, 'actor_grad_cont': {'desc': None, 'value': 'backprop'}, 'actor_grad_disc': {'desc': None, 'value': 'reinforce'}, 'slow_critic_update': {'desc': None, 'value': 1}, 'slow_critic_fraction': {'desc': None, 'value': 0.02}})
+2024-01-02 17:51:57,426 INFO    SenderThread:17760 [dir_watcher.py:__init__():211] watching files in: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files
+2024-01-02 17:51:57,426 INFO    SenderThread:17760 [sender.py:_start_run_threads():1124] run started: qfnw79st with start time 1704217856.412616
+2024-01-02 17:51:57,434 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: check_version
+2024-01-02 17:51:57,435 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: check_version
+2024-01-02 17:51:57,513 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: run_start
+2024-01-02 17:51:57,520 DEBUG   HandlerThread:17760 [system_info.py:__init__():32] System info init
+2024-01-02 17:51:57,520 DEBUG   HandlerThread:17760 [system_info.py:__init__():47] System info init done
+2024-01-02 17:51:57,520 INFO    HandlerThread:17760 [system_monitor.py:start():194] Starting system monitor
+2024-01-02 17:51:57,520 INFO    SystemMonitor:17760 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-02 17:51:57,521 INFO    SystemMonitor:17760 [interfaces.py:start():190] Started cpu monitoring
+2024-01-02 17:51:57,521 INFO    SystemMonitor:17760 [interfaces.py:start():190] Started disk monitoring
+2024-01-02 17:51:57,522 INFO    SystemMonitor:17760 [interfaces.py:start():190] Started gpu monitoring
+2024-01-02 17:51:57,523 INFO    SystemMonitor:17760 [interfaces.py:start():190] Started memory monitoring
+2024-01-02 17:51:57,524 INFO    SystemMonitor:17760 [interfaces.py:start():190] Started network monitoring
+2024-01-02 17:51:57,539 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:51:57,540 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:51:57,542 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:51:57,672 DEBUG   SenderThread:17760 [sender.py:send():380] send: telemetry
+2024-01-02 17:52:02,682 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:05,430 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:07,429 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:07,759 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:09,430 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:11,430 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:12,644 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:52:12,644 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:52:12,644 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:52:12,790 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:17,432 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:18,139 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:23,434 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:23,947 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:27,620 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:52:27,622 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:52:27,622 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:52:27,740 DEBUG   SenderThread:17760 [sender.py:send():380] send: telemetry
+2024-01-02 17:52:27,740 DEBUG   SenderThread:17760 [sender.py:send():380] send: telemetry
+2024-01-02 17:52:29,745 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:30,438 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/config.yaml
+2024-01-02 17:52:31,438 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:35,285 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:39,441 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:40,730 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:41,442 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:42,617 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:52:42,618 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:52:42,619 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:52:46,728 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:51,729 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:57,438 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:52:57,446 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:52:57,524 DEBUG   SystemMonitor:17760 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-02 17:52:57,527 DEBUG   SenderThread:17760 [sender.py:send():380] send: stats
+2024-01-02 17:52:57,619 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:52:57,620 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:52:57,620 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:52:59,447 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:53:01,447 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:53:02,553 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:07,553 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:12,554 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:12,619 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:53:12,620 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:53:12,621 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:53:17,722 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:22,723 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:27,529 DEBUG   SenderThread:17760 [sender.py:send():380] send: stats
+2024-01-02 17:53:27,624 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:53:27,625 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:53:27,625 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:53:27,803 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:32,803 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:37,804 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:42,619 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:53:42,620 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:53:42,662 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:53:43,739 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:48,740 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:53,740 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:53:57,529 DEBUG   SenderThread:17760 [sender.py:send():380] send: stats
+2024-01-02 17:53:57,620 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:53:57,621 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:53:57,622 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:53:58,801 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:03,802 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:08,803 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:12,619 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:54:12,619 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:54:12,623 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:54:14,723 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:19,724 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:24,724 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:27,531 DEBUG   SenderThread:17760 [sender.py:send():380] send: stats
+2024-01-02 17:54:27,620 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:54:27,620 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:54:27,662 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:54:29,769 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:34,770 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:39,771 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:42,687 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:54:42,688 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:54:42,706 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:54:43,478 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:54:44,790 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:47,479 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:54:49,865 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:54,866 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:54:57,532 DEBUG   SenderThread:17760 [sender.py:send():380] send: stats
+2024-01-02 17:54:57,626 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:54:57,626 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:54:57,626 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:54:59,482 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:55:00,106 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:55:04,356 INFO    HandlerThread:17760 [handler.py:handle_tbrecord():764] handling tbrecord: tbrecord {
+  log_dir: "/home/ziyu/logdir/ziyu_crafter_cuda_2_seed_2"
+  save: true
+}
+control {
+  relay_id: "92236dbedeb44256b367f7f8b10c3b68"
+}
+_info {
+  stream_id: "qfnw79st"
+}
+
+2024-01-02 17:55:04,358 DEBUG   HandlerThread:17760 [config_util.py:dict_from_config_file():101] no default config file found in config-defaults.yaml
+2024-01-02 17:55:04,414 DEBUG   SenderThread:17760 [sender.py:send():380] send: tbrecord
+2024-01-02 17:55:05,422 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:55:05,676 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:55:06,675 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/output.log
+2024-01-02 17:55:07,223 DEBUG   SenderThread:17760 [sender.py:send():380] send: files
+2024-01-02 17:55:07,223 INFO    SenderThread:17760 [sender.py:_save_file():1380] saving file events.out.tfevents.1704218104.Atari-ML-001.17452.0.v2 with policy live
+2024-01-02 17:55:07,675 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/events.out.tfevents.1704218104.Atari-ML-001.17452.0.v2
+2024-01-02 17:55:07,692 INFO    wandb-upload_0:17760 [upload_job.py:push():131] Uploaded file /tmp/tmp4zkze4fvwandb/ces6h4z3-events.out.tfevents.1704218104.Atari-ML-001.17452.0.v2
+2024-01-02 17:55:11,224 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:55:12,625 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:55:12,625 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:55:12,625 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:55:14,463 DEBUG   SenderThread:17760 [sender.py:send():380] send: history
+2024-01-02 17:55:14,463 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: summary_record
+2024-01-02 17:55:14,464 INFO    SenderThread:17760 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2024-01-02 17:55:14,677 INFO    Thread-12 :17760 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ziyu/code/side_codes/Dynamic_model/DLLM-ziyu/wandb/run-20240102_175156-qfnw79st/files/wandb-summary.json
+2024-01-02 17:55:16,465 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:55:21,481 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:55:26,481 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
+2024-01-02 17:55:27,533 DEBUG   SenderThread:17760 [sender.py:send():380] send: stats
+2024-01-02 17:55:27,625 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-02 17:55:27,625 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-02 17:55:27,625 DEBUG   SenderThread:17760 [sender.py:send_request():407] send_request: stop_status
+2024-01-02 17:55:31,798 DEBUG   HandlerThread:17760 [handler.py:handle_request():146] handle_request: status_report
